@@ -2,20 +2,24 @@
 
 <div class="login-main offset-md-4 col-md-4">
   <span class="titulo row">PPonto</span>
-  <form class="login-form row">
+
+  <form class="login-form row" [formGroup]="loginForm" novalidate>
+
+
     <div class="login-item col-md-8 offset-md-2">
       <label for="">Usuario</label>
-      <input type="text" class="form-control" placeholder="joao">
+      <input type="text" class="form-control" placeholder="joao" formControlName="usuario">
     </div>
 
     <div class="login-item col-md-8 offset-md-2">
       <label for="">Senha</label>
-      <input type="password" class="form-control" placeholder="123456789">
+      <input type="password" class="form-control" placeholder="123456789" formControlName="senha">
     </div>
 
     <div class="login-buttons col-md-8 offset-md-2">
-      <input type="button" class="btn btn-outline-primary" value="Logar">
+      <input type="button" class="btn btn-outline-primary" value="Logar" (click)="enviar()">
       <input type="reset" class="btn btn-outline-secondary" value="Limpar">
     </div>
+
   </form>
 </div>
