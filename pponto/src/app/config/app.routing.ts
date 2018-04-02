@@ -6,13 +6,21 @@ import { ControleTempoComponent } from '../home/controle-tempo/controle-tempo.co
 import { RelatorioComponent } from '../home/relatorio/relatorio.component';
 import { CadastroClienteComponent } from '../home/cadastro-cliente/cadastro-cliente.component';
 import { CadastroFuncionarioComponent } from '../home/cadastro-funcionario/cadastro-funcionario.component';
+import { homeComponent } from './../home/home.component';
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
-    { path: 'home', component: ControleTempoComponent },
-    { path: 'home/relatorio', component: RelatorioComponent },
-    { path: 'home/cadastro-cliente', component: CadastroClienteComponent },
-    { path: 'home/cadastro-funcionario', component: CadastroFuncionarioComponent }
+    {
+        path: 'home',
+        component: homeComponent,
+        children: [
+            { path: '*', component: RelatorioComponent },
+            { path: 'relatorio', component: RelatorioComponent },
+            { path: 'cadastro-cliente', component: CadastroClienteComponent },
+            { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent }
+        ]
+    },
+
 ];
 
 @NgModule({
