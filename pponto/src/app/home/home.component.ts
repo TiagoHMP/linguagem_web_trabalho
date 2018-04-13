@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class homeComponent implements OnInit {
 
-    constructor() { }
+    @ViewChild('menu') menu: ElementRef;
+    menuAberto: boolean = true;
+
+    constructor(
+        private route: Router
+    ) { }
 
     ngOnInit() {
+    }
+
+    goHome(){        
+        this.route.navigate(['home/relatorio']);
+    }
+
+    goCadastroCliente(){
+        
     }
 
 }

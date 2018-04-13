@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroClienteComponent implements OnInit {
 
-  constructor() { }
+  constructor() { }  
 
   ngOnInit() {
   }

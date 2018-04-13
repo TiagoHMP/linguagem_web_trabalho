@@ -1,6 +1,11 @@
-<div>
-    home
+<div class="menu">
+    <div class="menu-itens col-md-7 row offset-md-3">
+        <div class="item col-md-3" (click)="goHome()">Home</div>
+        <div class="item col-md-3">Cadastro de Cliente</div>
+        <div class="item col-md-3">Cadastro de Funcionário</div>
+        <div class="item col-md-3">Relatórios</div>
+    </div>
 </div>
-<div>
+<div class="col-md-offset-4">
     <router-outlet></router-outlet>
 </div>
