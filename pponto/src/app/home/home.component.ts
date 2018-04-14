@@ -18,12 +18,8 @@ export class homeComponent implements OnInit {
     ngOnInit() {
     }
 
-    goHome(){        
-        this.route.navigate(['home/relatorio']);
-    }
-
-    goCadastroCliente(){
-        
+    goTo(url:string){
+        this.route.navigate([url]);
     }
 
 }
