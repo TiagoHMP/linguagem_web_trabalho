@@ -1,9 +1,7 @@
-.item{
-    display: inline;
-}
-
-.menu{
- 
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 }
 
 .menu-itens{ 
@@ -13,15 +11,29 @@
     padding: 0;
 }
 
+.menu{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
 .item{    
     display: flex;        
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    justify-content: center;    
     text-align: center;          
 }
 
-.item:hover{
-    background: mediumseagreen;
+.item:hover{   
     cursor: pointer;        
+}
+
+.active-link, .item:hover{    
+    background: mediumseagreen;
+}
+
+@media screen and (max-width:768px){
+    .menu-itens{
+        background: lightskyblue;      
+    }
 }

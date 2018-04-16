@@ -14,7 +14,7 @@ const routes: Routes = [
         path: 'home',
         component: homeComponent,
         children: [
-            { path: '*', component: RelatorioComponent },
+            { path: '*', component: ControleTempoComponent },
             { path: 'relatorio', component: RelatorioComponent },
             { path: 'cadastro-cliente', component: CadastroClienteComponent },
             { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent }

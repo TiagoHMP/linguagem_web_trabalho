@@ -18,8 +18,10 @@ export class homeComponent implements OnInit {
     ngOnInit() {
     }
 
-    goTo(url:string){
+    goTo(url: string) {
         this.route.navigate([url]);
     }
+
+
 
 }

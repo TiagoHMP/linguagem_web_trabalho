@@ -1,11 +1,11 @@
 <div class="menu">
-    <div class="menu-itens col-md-6 row offset-md-3">
-        <div class="item col-md-3" (click)="goTo('home')">Home</div>
-        <div class="item col-md-3" (click)="goTo('home/cadastro-cliente')">Cadastro de Cliente</div>
-        <div class="item col-md-3" (click)="goTo('home/cadastro-funcionario')">Cadastro de Funcionário</div>
-        <div class="item col-md-3" (click)="goTo('home/relatorio')">Relatórios</div>
+    <div class="menu-itens col-md-6 row">
+        <a class="item col-md-3" [routerLink]="['*']" routerLinkActive="active-link"> Home </a>
+        <a class="item col-md-3 " [routerLink]="['cadastro-cliente']" routerLinkActive="active-link">Cadastro de Cliente</a>
+        <a class="item col-md-3 " [routerLink]="['cadastro-funcionario']" routerLinkActive="active-link">Cadastro de Funcionário</a>
+        <a class="item col-md-3 " [routerLink]="['relatorio'] " routerLinkActive="active-link">Relatórios</a>
     </div>
 </div>
-<div class="offset-md-4">
+<div class="offset-md-3">
     <router-outlet></router-outlet>
 </div>
