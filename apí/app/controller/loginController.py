@@ -1,7 +1,12 @@
 from app import app, request, jsonify
+from app.dto.responseDTO import Response
+
+
 
 @app.route('/login', methods=['POST'])
-def verificaDadosDoLogin():
+def logar():
     user = request.json
-    return 'usuario'
+    return jsonify(Response(user).get_data())
+
+
 
