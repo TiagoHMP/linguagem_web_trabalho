@@ -1,5 +1,6 @@
 import peewee
 from app import db
+from app.dominio.entidade.usuario import Usuario
 
 class Usuario(peewee.Model):
 

@@ -5,4 +5,6 @@ class Response:
         self.data = data
 
     def get_data(self):
-        return {"data": self.data}
+        return {
+           "data": self.data.get_values()
+        }
