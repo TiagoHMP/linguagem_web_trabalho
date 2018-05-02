@@ -7,9 +7,9 @@ import jsonpickle
 @app.route('/login', methods=['POST'])
 def logar():
     content = request.json
-    dados = _repositorio.buscar_usuario(content.id)
-    if(dados.id > 0):
+    dados = _repositorio.buscar_usuario(content['id'])
+    if(dados['id'] > 0):
         usuario = Response(dados)
-        return jsonpickle.encode(usuario)
+        return jsonpickle.encode(usuario.data)
     return Response("usuario invalido ou inexistente")
 
