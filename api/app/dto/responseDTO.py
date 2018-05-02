@@ -6,5 +6,5 @@ class Response:
 
     def get_data(self):
         return {
-           "data": self.data.get_values()
+           "data": self.data
         }
