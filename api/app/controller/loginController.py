@@ -10,6 +10,6 @@ def logar():
     dados = _repositorio.buscar_usuario(content['id'])
     if(dados['id'] > 0):
         usuario = Response(dados)
-        return jsonpickle.encode(usuario.data)
+        return jsonpickle.encode(usuario.get_data())
     return Response("usuario invalido ou inexistente")
 
