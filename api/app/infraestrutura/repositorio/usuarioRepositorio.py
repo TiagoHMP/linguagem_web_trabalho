@@ -6,7 +6,7 @@ class UsuarioRepositorio:
     def __init__(self):
         pass
 
-    def buscar_usuario(id):
-        user = Usuario.get(Usuario.id == id)
+    def buscar_usuario(login):
+        user = Usuario.get(Usuario.login == login.upper())
         resposta = UsuarioEntity(user.id, user.login, user.senha)
         return resposta.get_values()
