@@ -9,7 +9,7 @@ def logar():
     content = request.json
     dados = _repositorio.buscar_usuario(content['login'])
     if dados == False :
-        return abort(401, 'usuario invalido ou inexistente')
+        return abort(401)
     else:
         usuario = Response(dados)
         return jsonpickle.encode(usuario.get_data())
