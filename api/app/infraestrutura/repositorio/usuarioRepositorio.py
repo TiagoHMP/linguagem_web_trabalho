@@ -7,6 +7,9 @@ class UsuarioRepositorio:
         pass
 
     def buscar_usuario(login):
-        user = Usuario.get(Usuario.login == login.upper())
-        resposta = UsuarioEntity(user.id, user.login, user.senha)
-        return resposta.get_values()
+        try:
+            user = Usuario.get(Usuario.login == login.upper())
+            resposta = UsuarioEntity(user.id, user.login, user.senha)
+            return resposta.get_values()
+        except:
+            return (False)
