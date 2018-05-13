@@ -8,7 +8,8 @@ import jsonpickle
 def logar():
     content = request.json
     dados = _repositorio.buscar_usuario(content['login'])
-    if dados == False :
+
+    if dados.id == '':
         return abort(401)
     else:
         usuario = Response(dados)

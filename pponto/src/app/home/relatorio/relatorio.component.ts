@@ -12,4 +12,8 @@ export class RelatorioComponent implements OnInit {
   ngOnInit() {
   }
 
+  buscarAlgo() {
+    alert('parabens')
+  }
+
 }
