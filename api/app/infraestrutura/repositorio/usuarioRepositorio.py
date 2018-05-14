@@ -15,7 +15,7 @@ class UsuarioRepositorio:
             resposta = UsuarioEntity(user.id, user.login, user.senha, user.tipoUsuario)
 
             if resposta.validar_usuario(user):
-                return resposta.get_values()
+                return resposta
 
             return UsuarioEntity()
 

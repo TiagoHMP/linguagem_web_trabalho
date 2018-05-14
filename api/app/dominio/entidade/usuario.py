@@ -22,3 +22,6 @@ class Usuario:
             return True
         else:
             return False
+
+    def get_id(self):
+        return self.id
