@@ -9,7 +9,7 @@ db = peewee.SqliteDatabase('pponto')
 
 
 from app.controller import loginController
-
+from app.controller import usuarioController
 
 from app.infraestrutura.mapping.usuarioMap import Usuario
 
