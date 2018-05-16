@@ -7,9 +7,9 @@ import jsonpickle
 @app.route('/login', methods=['POST'])
 def logar():
     content = request.json
-    dados = _repositorio.buscar_usuario(content['login'])
+    dados = _repositorio.buscar_usuario(content)
 
-    if dados.get_id() == '':
+    if dados.get_login() == '':
         return abort(401)
     else:
         usuario = Response(dados.get_values())

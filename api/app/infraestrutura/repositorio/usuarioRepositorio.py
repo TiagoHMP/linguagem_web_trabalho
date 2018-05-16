@@ -1,5 +1,7 @@
 from app.infraestrutura.mapping.usuarioMap import Usuario
 from app.dominio.entidade.usuario import Usuario as UsuarioEntity
+from app.dominio.service.encryptService import encryptService
+
 
 
 class UsuarioRepositorio:
@@ -11,10 +13,10 @@ class UsuarioRepositorio:
     def buscar_usuario(user):
 
         try:
-            user = Usuario.get(Usuario.login == user.upper())
-            resposta = UsuarioEntity(user.id, user.login, user.senha, user.tipoUsuario)
+            savedUser = Usuario.get(Usuario.login == user['login'].upper())
+            resposta = UsuarioEntity('', user['login'], user['senha'], user['tipoUsuario'])
 
-            if resposta.validar_usuario(user):
+            if resposta.validar_usuario(savedUser):
                 return resposta
 
             return UsuarioEntity()
@@ -22,15 +24,17 @@ class UsuarioRepositorio:
         except:
             return UsuarioEntity()
 
+
     @staticmethod
     def cadastrar_usuario(user):
         newUser = UsuarioRepositorio.buscar_usuario(user)
+        encodeSenha = encryptService.encrypt(user['senha'])
 
         if newUser.id == '':
 
             cadastrar = Usuario(
                 login = user['login'].upper(),
-                senha = user['senha'],
+                senha = encodeSenha,
                 tipoUsuario = user['tipoUsuario'].upper()
             )
 
