@@ -3,16 +3,19 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 import { RelatorioComponent } from './relatorio/relatorio.component';
 import { ControleTempoComponent } from './controle-tempo/controle-tempo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-  CadastroClienteComponent,
-  CadastroFuncionarioComponent,
-  RelatorioComponent,
-  ControleTempoComponent
-],
-imports:[],
-providers:[]
+    CadastroClienteComponent,
+    CadastroFuncionarioComponent,
+    RelatorioComponent,
+    ControleTempoComponent,
+  ],
+  imports: [
+    FormsModule
+  ],
+  providers: []
 })
 
-export class HomeModule {}
+export class HomeModule { }
