@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { CadastroFuncionarioService } from './cadastro-funcionario.service'
 import { Usuario } from '../../entidades/usuario';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'app-cadastro-funcionario',
@@ -14,20 +15,27 @@ export class CadastroFuncionarioComponent {
   usuario2 = new Usuario(1, 'rafael', '1234', 'M')
 
   constructor(
-    private _CadastroFuncionarioService: CadastroFuncionarioService
-  ) { }
+    private _CadastroFuncionarioService: CadastroFuncionarioService,
+    private toastr: ToastsManager,
+    private vcr: ViewContainerRef
+  ) {
+    this.toastr.setRootViewContainerRef(this.vcr);
+  }
 
   salvarUsuario() {
     if (this.user.login !== '' && this.user.senha !== '') {
       this._CadastroFuncionarioService.salvarFuncionario(this.user).subscribe(
-        resp => { alert('Salvo!') },
-        erro => { alert('Erro!') }
+        resp => {
+          this.toastr.success('contato salvo', 'SUCESSO')
+        },
+        erro => {
+          this.toastr.error('erro ao cadastrar', 'ERRO')
+        }
       )
     } else {
       alert('campos devem estar preenchidos')
     }
   }
-
 
 }
 
