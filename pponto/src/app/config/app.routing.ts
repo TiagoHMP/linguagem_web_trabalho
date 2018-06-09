@@ -14,10 +14,12 @@ const routes: Routes = [
         path: 'home',
         component: homeComponent,
         children: [
-            { path: '*', component: ControleTempoComponent },
+            { path: 'controle-horas', component: ControleTempoComponent },
             { path: 'relatorio', component: RelatorioComponent },
             { path: 'cadastro-cliente', component: CadastroClienteComponent },
-            { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent }
+            { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent },
+            { path: '',redirectTo:'controle-horas', pathMatch: 'full'},            
+            { path: '**', redirectTo:'controle-horas', pathMatch: 'full' },
         ]
     },
 

@@ -1,11 +1,15 @@
-<div class="menu col-md-12">
-    <div class="menu-itens row">
-        <a class="item col-md-3" [routerLink]="['*']" routerLinkActive="active-link"> Home </a>
-        <a class="item col-md-3 " [routerLink]="['cadastro-cliente']" routerLinkActive="active-link">Cadastro de Cliente</a>
-        <a class="item col-md-3 " [routerLink]="['cadastro-funcionario']" routerLinkActive="active-link">Cadastro de Funcionário</a>
-        <a class="item col-md-3 " [routerLink]="['relatorio'] " routerLinkActive="active-link">Relatórios</a>
+<div class="menu col-md-2">
+    <div class="nome-prog">
+        <h2>PPonto</h2>
+        <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+    </div>
+    <div class="menu-itens">
+        <a class="item col-md-12" [routerLink]="['controle-horas']" routerLinkActive="active-link"> Controle de horas </a>
+        <a class="item col-md-12 " [routerLink]="['cadastro-cliente']" routerLinkActive="active-link">Cadastro de Cliente</a>
+        <a class="item col-md-12 " [routerLink]="['cadastro-funcionario']" routerLinkActive="active-link">Cadastro de Funcionário</a>
+        <a class="item col-md-12 " [routerLink]="['relatorio'] " routerLinkActive="active-link">Relatórios</a>
     </div>
 </div>
-<div class="offset-md-2 col-md-8">
+<div class="offset-md-2 col-md-8 conteudo">
     <router-outlet></router-outlet>
 </div>

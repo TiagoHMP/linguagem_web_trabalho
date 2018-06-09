@@ -1,6 +1,12 @@
+label{
+    margin: 0;
+}
+
 .botoes{
-    padding: 0;
-    width: 228px;       
+    padding: 0;    
     display: flex; 
-    justify-content: space-between;
+    justify-content: space-around;    
+}
+.card{
+    padding: 5px 10px 0;
 }

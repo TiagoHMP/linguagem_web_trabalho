@@ -1,0 +1,9 @@
+.card{
+    padding: 15px 15px;
+    flex-direction: row;
+}
+
+.botoes{
+    margin-top: 5px;
+    padding: 0
+}

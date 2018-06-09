@@ -4,6 +4,7 @@ import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-fu
 import { RelatorioComponent } from './relatorio/relatorio.component';
 import { ControleTempoComponent } from './controle-tempo/controle-tempo.component';
 import { FormsModule } from '@angular/forms';
+import { NovaTarefaComponent } from './controle-tempo/nova-tarefa/nova-tarefa.component';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { FormsModule } from '@angular/forms';
     CadastroFuncionarioComponent,
     RelatorioComponent,
     ControleTempoComponent,
+    NovaTarefaComponent,
   ],
   imports: [
     FormsModule

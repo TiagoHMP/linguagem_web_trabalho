@@ -1,6 +1,14 @@
+label{
+    margin: 0;
+}
+
 .botoes{
     width: 228px;
     padding: 0;
     display: flex;
     justify-content: space-between;
+}
+
+.card{
+    padding: 5px 10px 0;
 }
