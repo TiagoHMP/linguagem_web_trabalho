@@ -11,7 +11,6 @@ class UsuarioRepositorio:
 
     @staticmethod
     def buscar_usuario(user):
-
         try:
             savedUser = Usuario.get(Usuario.login == user['login'].upper())
             resposta = UsuarioEntity('', user['login'], user['senha'], user['tipoUsuario'])

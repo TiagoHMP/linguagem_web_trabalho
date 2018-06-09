@@ -1,11 +1,11 @@
-<div class="menu">
-    <div class="menu-itens col-md-6 row">
+<div class="menu col-md-12">
+    <div class="menu-itens row">
         <a class="item col-md-3" [routerLink]="['*']" routerLinkActive="active-link"> Home </a>
         <a class="item col-md-3 " [routerLink]="['cadastro-cliente']" routerLinkActive="active-link">Cadastro de Cliente</a>
         <a class="item col-md-3 " [routerLink]="['cadastro-funcionario']" routerLinkActive="active-link">Cadastro de Funcionário</a>
         <a class="item col-md-3 " [routerLink]="['relatorio'] " routerLinkActive="active-link">Relatórios</a>
     </div>
 </div>
-<div class="offset-md-3 col-md-6">
+<div class="offset-md-2 col-md-8">
     <router-outlet></router-outlet>
 </div>
