@@ -1,8 +1,8 @@
 <form class="offset-md-1 col-md-11">
   <div class="col-md-12 botao">
-    <input type="button" class="btn btn-success" value="nova tarefa">
+    <input type="button" class="btn btn-success" value="nova tarefa" (click)="criarTarefa()">
   </div>
-  <div class="col-md-12 conteudo">
-    <app-nova-tarefa></app-nova-tarefa>
+  <div class="col-md-12 conteudo" *ngFor="let tarefa of tarefas">
+    <app-nova-tarefa [tarefa]="tarefa" (removerTarefa)="removerTarefa($event)"></app-nova-tarefa>
   </div>
 </form>

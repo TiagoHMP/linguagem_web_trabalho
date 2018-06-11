@@ -8,7 +8,9 @@ class clienteRepositorio():
     @staticmethod
     def cadastrar(cliente):
         novoCliente = clienteMap(
-            nome = cliente['nome']
+            nome = cliente['nome'],
+            apelido = cliente['apelido'],
+            cnpj = cliente['cnpj']
         )
 
         novoCliente.save()

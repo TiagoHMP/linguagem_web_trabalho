@@ -18,10 +18,12 @@ const routes: Routes = [
             { path: 'relatorio', component: RelatorioComponent },
             { path: 'cadastro-cliente', component: CadastroClienteComponent },
             { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent },
-            { path: '',redirectTo:'controle-horas', pathMatch: 'full'},            
-            { path: '**', redirectTo:'controle-horas', pathMatch: 'full' },
+            { path: '', redirectTo: 'controle-horas', pathMatch: 'full' },
+            { path: '**', redirectTo: 'controle-horas', pathMatch: 'full' },
         ]
     },
+    { path: '', component: LoginComponent },
+    { path: '**', component: LoginComponent }
 
 ];
 

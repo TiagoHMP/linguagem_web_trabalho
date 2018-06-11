@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class homeComponent implements OnInit {
 
     @ViewChild('menu') menu: ElementRef;
-    menuAberto: boolean = true;
+    @ViewChild('menuItem') menuItem: ElementRef;
+    menuAberto: boolean = false;
 
     constructor(
         private route: Router
@@ -22,6 +23,23 @@ export class homeComponent implements OnInit {
         this.route.navigate([url]);
     }
 
+    toogleMenu() {
+        if (this.menuAberto) {
+            this.fechaMenu();
+            this.menuAberto = false;
+        } else {
+            this.abreMenu();
+            this.menuAberto = true;
+        }
+    }
 
+    private abreMenu() {
+        this.menu.nativeElement.style.height = "auto";
+        this.menuItem.nativeElement.style.display = "inline";
+    }
 
+    fechaMenu() {
+        this.menu.nativeElement.style.height = "50px";
+        this.menuItem.nativeElement.style.display = "none";
+    }
 }

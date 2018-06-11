@@ -65,6 +65,7 @@ h2{
     }
 
     .menu-itens{
+        background: lightskyblue;
         display: none;
     }
 

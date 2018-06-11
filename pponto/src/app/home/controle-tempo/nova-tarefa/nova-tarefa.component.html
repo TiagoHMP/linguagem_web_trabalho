@@ -9,17 +9,17 @@
     <option value=""> projeto 1 </option>
   </select>
 
-  <div class="form-control col-md-3">
-    hora do inicio
+  <div class="iten form-control col-md-3">
+    {{tarefa.horaInicio}}
   </div>
 
-  <div class="form-control col-md-3">
-    hora termino
+  <div class="iten form-control col-md-3">
+    {{tarefa.horaFim}}
   </div>
 
   <div class="col-md-12 botoes">
-    <input type="button" class="btn btn-success col-md-2" value="iniciar">
-    <input type="button" class="btn btn-danger col-md-2" value="excluir">
+    <input type="button" class="btn btn-success col-md-2" [value]="mostarBotaoIniciar ? 'iniciar' : 'Finalizar'" (click)="marcarTempo()">
+    <input type="button" class="btn btn-danger col-md-2" value="excluir" (click)="ExcluirTarefa()">
   </div>
 
 </div>

@@ -5,6 +5,7 @@ import { RelatorioComponent } from './relatorio/relatorio.component';
 import { ControleTempoComponent } from './controle-tempo/controle-tempo.component';
 import { FormsModule } from '@angular/forms';
 import { NovaTarefaComponent } from './controle-tempo/nova-tarefa/nova-tarefa.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NovaTarefaComponent } from './controle-tempo/nova-tarefa/nova-tarefa.co
     NovaTarefaComponent,
   ],
   imports: [
-    FormsModule
+    FormsModule,
+    BrowserModule
   ],
   providers: []
 })
