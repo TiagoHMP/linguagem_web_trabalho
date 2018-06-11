@@ -10,11 +10,13 @@ export class homeComponent implements OnInit {
 
     @ViewChild('menu') menu: ElementRef;
     @ViewChild('menuItem') menuItem: ElementRef;
-    menuAberto: boolean = false;
+    menuAberto: boolean;
 
     constructor(
         private route: Router
-    ) { }
+    ) {
+        this.menuAberto = !this.detectMobile();
+    }
 
     ngOnInit() {
     }
@@ -33,13 +35,28 @@ export class homeComponent implements OnInit {
         }
     }
 
-    private abreMenu() {
-        this.menu.nativeElement.style.height = "auto";
-        this.menuItem.nativeElement.style.display = "inline";
+    fechaMenu() {
+        this.menuItem.nativeElement.style.top = "-500px";
     }
 
-    fechaMenu() {
-        this.menu.nativeElement.style.height = "50px";
-        this.menuItem.nativeElement.style.display = "none";
+    private abreMenu() {
+        this.menuItem.nativeElement.style.top = "0px";
     }
+
+    private detectMobile() {
+        if (navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+        ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 }

@@ -1,3 +1,4 @@
+
 a{
     display: flex;
     justify-content: center;
@@ -13,7 +14,11 @@ h2{
 }
 
 .fa{
-    display: none;
+    font-size: 30px;
+}
+
+.fa:hover{
+    cursor: pointer;
 }
 
 .menu{    
@@ -21,17 +26,24 @@ h2{
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;    
-    background: lightskyblue;
-    z-index: 999
+    bottom: 0;           
+    background: lightskyblue;     
+    z-index: 999;      
+}
+
+.conteudo-menu{
+    position: relative;         
+    left: 0 ;
 }
 
 .menu-itens{     
+    position: absolute;
     display: flex;
     justify-content: center;    
     flex-direction: column;
     font-size: 16px;    
-    min-height: 50px;       
+    min-height: 50px; 
+    width: 100%;
     padding: 0;     
 }
 
@@ -52,8 +64,9 @@ h2{
 
 .nome-prog{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;    
+    align-content: center;
     text-align: center;
     height: 50px;
     border-bottom: 1px solid black;
@@ -61,12 +74,13 @@ h2{
 
 @media screen and (max-width:768px){
     .menu{
-        height: 50px    
+        height: 50px; 
+        width: 100%;       
     }
 
     .menu-itens{
-        background: lightskyblue;
-        display: none;
+        background: lightskyblue; 
+        top: -500px;            
     }
 
     .conteudo{
@@ -75,11 +89,6 @@ h2{
 
     .nome-prog{
         justify-content: space-around;
-    }
-    
-    .fa{
-        display: inline;
-        font-size: 30px;
     }
     
 }

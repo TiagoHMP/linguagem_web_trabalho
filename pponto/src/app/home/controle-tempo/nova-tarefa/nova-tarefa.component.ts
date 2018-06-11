@@ -21,9 +21,9 @@ export class NovaTarefaComponent implements OnInit {
 
   marcarTempo() {
     const tempo: Date = new Date();
-    const hora = tempo.getHours();
-    const minuto = tempo.getMinutes();
-    const segundos = tempo.getSeconds();
+    const hora = tempo.getHours() > 9 ? tempo.getHours() : `0${tempo.getHours()}`;
+    const minuto = tempo.getMinutes() > 9 ? tempo.getMinutes() : `0${tempo.getMinutes()}`;
+    const segundos = tempo.getSeconds() > 9 ? tempo.getSeconds() : `0${tempo.getSeconds()}`;
     const horario = `${hora}:${minuto}:${segundos}`;
 
     if (this.tarefa.horaInicio === '0') {
