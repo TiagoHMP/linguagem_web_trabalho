@@ -17,8 +17,9 @@ from app.infraestrutura.mapping.cliente import cliente
 
 try:
     Usuario.create_table()
+    cliente.create_table()
 except peewee.OperationalError:
-    print('tabela usuario ja existe')
+    print('tabelas ja existe')
 
 
 
