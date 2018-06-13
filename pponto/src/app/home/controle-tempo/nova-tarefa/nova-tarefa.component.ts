@@ -20,10 +20,10 @@ export class NovaTarefaComponent implements OnInit {
   }
 
   marcarTempo() {
-    const tempo: Date = new Date();
-    const hora = tempo.getHours() > 9 ? tempo.getHours() : `0${tempo.getHours()}`;
-    const minuto = tempo.getMinutes() > 9 ? tempo.getMinutes() : `0${tempo.getMinutes()}`;
-    const segundos = tempo.getSeconds() > 9 ? tempo.getSeconds() : `0${tempo.getSeconds()}`;
+    this.tarefa.data = new Date();
+    const hora = this.tarefa.data.getHours() > 9 ? this.tarefa.data.getHours() : `0${this.tarefa.data.getHours()}`;
+    const minuto = this.tarefa.data.getMinutes() > 9 ? this.tarefa.data.getMinutes() : `0${this.tarefa.data.getMinutes()}`;
+    const segundos = this.tarefa.data.getSeconds() > 9 ? this.tarefa.data.getSeconds() : `0${this.tarefa.data.getSeconds()}`;
     const horario = `${hora}:${minuto}:${segundos}`;
 
     if (this.tarefa.horaInicio === '0') {
@@ -35,8 +35,13 @@ export class NovaTarefaComponent implements OnInit {
     }
   }
 
-  ExcluirTarefa() {
+  excluirTarefa() {
     this.removerTarefa.emit(this.tarefa);
+  }
+
+  zerarTimer() {
+    this.tarefa.horaInicio = '0';
+    this.tarefa.horaFim = '0'
   }
 
   private toogleBotãoIniciar() {

@@ -14,3 +14,9 @@ class clienteRepositorio():
         )
 
         novoCliente.save()
+
+    @staticmethod
+    def buscarTodosClientes():
+       retorno = clienteMap.select().where(clienteMap.id > 0)
+       retorno = list(retorno)
+       return retorno

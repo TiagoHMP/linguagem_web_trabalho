@@ -3,6 +3,7 @@ export class Tarefa {
     projeto: string;
     horaInicio: string;
     horaFim: string;
+    data: Date;
 
     constructor() {
         this.horaFim = '0';
