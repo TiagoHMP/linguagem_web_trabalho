@@ -1,14 +1,18 @@
 class tarefa:
-    idCliente: ''
-    idProjeto: ''
+    id = ''
+    cliente: ''
+    usuario: ''
+    projeto: ''
     horaInicio: ''
     horaFim: ''
     data: ''
 
 
-    def __init__(self,idCliente = '', idProjeto = '', horaInicio = '', horaFim = '', data = ''):
+    def __init__(self,id='' ,cliente = '', usuario = '', projeto = '', horaInicio = '', horaFim = '', data   = ''):
+        self.id = id
         self.data = data
-        self.idCliente = idCliente
-        self.idProjeto = idProjeto
+        self.idCliente = cliente
+        self.usuario = usuario
+        self.idProjeto = projeto
         self.horaFim = horaFim
         self.horaInicio = horaInicio
