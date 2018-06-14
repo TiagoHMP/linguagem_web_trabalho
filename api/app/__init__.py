@@ -13,7 +13,7 @@ from app.controller import usuarioController
 from app.controller import clienteController
 
 from app.infraestrutura.mapping.usuarioMap import Usuario
-from app.infraestrutura.mapping.cliente import cliente
+from app.infraestrutura.mapping.clienteMap import cliente
 
 try:
     Usuario.create_table()

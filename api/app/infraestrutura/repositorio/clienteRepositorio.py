@@ -1,4 +1,4 @@
-from app.infraestrutura.mapping.cliente import cliente as clienteMap
+from app.infraestrutura.mapping.clienteMap import cliente as clienteMap
 
 class clienteRepositorio():
 
