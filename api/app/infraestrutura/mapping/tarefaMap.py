@@ -5,8 +5,8 @@ from app import db
 class tarefa(peewee.Model):
     idCliente = peewee.IntegerField()
     idProjeto = peewee.IntegerField()
-    horaInicio = peewee.DateField()
-    horaFim = peewee. DateField()
+    horaInicio = peewee.TextField()
+    horaFim = peewee.TextField()
     data = peewee. DateField()
 
     class Meta:

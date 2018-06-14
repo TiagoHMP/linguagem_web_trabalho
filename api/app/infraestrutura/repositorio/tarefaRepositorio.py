@@ -1,6 +1,6 @@
 from app.infraestrutura.mapping.tarefaMap import tarefa as tarefaMap
 
-class clienteRepositorio():
+class tarefaRepositorio():
 
     def __init__(self):
         pass

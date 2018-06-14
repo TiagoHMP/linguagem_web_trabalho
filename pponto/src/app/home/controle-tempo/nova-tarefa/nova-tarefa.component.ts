@@ -1,11 +1,13 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Tarefa } from '../../../entidades/tarefa';
+import { ControleTempoService } from '../controle-tempo.service';
 
 
 @Component({
   selector: 'app-nova-tarefa',
   templateUrl: './nova-tarefa.component.html',
-  styleUrls: ['./nova-tarefa.component.css']
+  styleUrls: ['./nova-tarefa.component.css'],
+  providers: [ControleTempoService]
 })
 export class NovaTarefaComponent implements OnInit {
 
@@ -14,7 +16,9 @@ export class NovaTarefaComponent implements OnInit {
   @Output() removerTarefa = new EventEmitter<Tarefa>();
 
 
-  constructor() { }
+  constructor(
+    private _controleTempoService: ControleTempoService
+  ) { }
 
   ngOnInit() {
   }
@@ -32,6 +36,7 @@ export class NovaTarefaComponent implements OnInit {
     } else {
       this.tarefa.horaFim = horario;
       this.toogleBotãoIniciar();
+      this.salvarTarefa();
     }
   }
 
@@ -43,6 +48,14 @@ export class NovaTarefaComponent implements OnInit {
     this.tarefa.horaInicio = '0';
     this.tarefa.horaFim = '0'
   }
+
+  private salvarTarefa() {
+    this._controleTempoService.salvarTarefa(this.tarefa).subscribe(
+      resp => { alert('salvo') },
+      err => { alert('erro') }
+    );
+  }
+
 
   private toogleBotãoIniciar() {
     this.mostarBotaoIniciar = !this.mostarBotaoIniciar;
