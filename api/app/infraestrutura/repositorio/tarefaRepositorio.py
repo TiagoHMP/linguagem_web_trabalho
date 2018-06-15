@@ -7,7 +7,7 @@ class tarefaRepositorio():
 
 
     @staticmethod
-    def save(tarefa):
+    def dsave(tarefa):
         novaTarefa = tarefaMap(
             idCliente=tarefa['idCliente'],
             idProjeto=tarefa['idProjeto'],

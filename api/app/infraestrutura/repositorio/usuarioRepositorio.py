@@ -13,10 +13,10 @@ class UsuarioRepositorio:
     def buscar_usuario(user):
         try:
             savedUser = Usuario.get(Usuario.login == user['login'].upper())
-            resposta = UsuarioEntity('', user['login'], user['senha'], user['tipoUsuario'])
+            resposta = UsuarioEntity(user['id'], user['login'], user['senha'], user['tipoUsuario'])
 
             if resposta.validar_usuario(savedUser):
-                return resposta
+                return savedUser.getValues()
 
             return UsuarioEntity()
 

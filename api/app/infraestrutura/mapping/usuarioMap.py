@@ -1,5 +1,6 @@
 import peewee
 from app import db
+from app.dominio.entidade.usuario import Usuario as usuarioEntity
 
 class Usuario(peewee.Model):
 
@@ -7,6 +8,14 @@ class Usuario(peewee.Model):
     login = peewee.CharField()
     senha = peewee.BlobField()
     tipoUsuario = peewee.CharField()
+
+    def getValues(self):
+        return usuarioEntity(
+            self.id,
+            self.login,
+            '',
+            self.tipoUsuario
+        )
 
 
     class Meta:

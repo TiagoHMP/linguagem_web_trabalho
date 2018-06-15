@@ -1,3 +1,4 @@
+import { LocalStorageService } from './../shared/local-storage.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms/src/model'
 import { FormBuilder, Validators } from '@angular/forms';
@@ -8,7 +9,7 @@ import { Usuario } from '../entidades/usuario';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [LoginService]
+  providers: [LoginService, LocalStorageService]
 })
 export class LoginComponent implements OnInit {
 
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private _loginService: LoginService
+    private _loginService: LoginService,
+    private _localStorageService: LocalStorageService
   ) { }
 
   ngOnInit() {
@@ -31,6 +33,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         resp => {
           console.log(resp);
+          this._localStorageService.setUser(resp.data);
         },
         err => {
           console.log('erro');
