@@ -4,12 +4,13 @@ import { FormGroup } from '@angular/forms/src/model'
 import { FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from './login.service';
 import { Usuario } from '../entidades/usuario';
+import { AlertService } from '../shared/alert.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [LoginService, LocalStorageService]
+  providers: [LoginService, LocalStorageService, AlertService]
 })
 export class LoginComponent implements OnInit {
 
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private _loginService: LoginService,
-    private _localStorageService: LocalStorageService
+    private _localStorageService: LocalStorageService,
+    private _alert: AlertService
   ) { }
 
   ngOnInit() {
@@ -32,11 +34,10 @@ export class LoginComponent implements OnInit {
     this._loginService.verificarLogin(this.usuario)
       .subscribe(
         resp => {
-          console.log(resp);
           this._localStorageService.setUser(resp.data);
         },
         err => {
-          console.log('erro');
+          this._alert.erro('Erro ao logar', 'Problema ao efetuar o login, verifique se os dados estão corretos')
         }
       )
   }
