@@ -1,13 +1,13 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { CadastroFuncionarioService } from './cadastro-funcionario.service'
 import { Usuario } from '../../entidades/usuario';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { AlertService } from '../../shared/alert.service'
 
 @Component({
   selector: 'app-cadastro-funcionario',
   templateUrl: './cadastro-funcionario.component.html',
   styleUrls: ['./cadastro-funcionario.component.css'],
-  providers: [CadastroFuncionarioService]
+  providers: [CadastroFuncionarioService, AlertService]
 })
 export class CadastroFuncionarioComponent {
 
@@ -16,20 +16,17 @@ export class CadastroFuncionarioComponent {
 
   constructor(
     private _CadastroFuncionarioService: CadastroFuncionarioService,
-    private toastr: ToastsManager,
-    private vcr: ViewContainerRef
-  ) {
-    this.toastr.setRootViewContainerRef(this.vcr);
-  }
+    private _alert: AlertService
+  ) { }
 
   salvarUsuario() {
     if (this.user.login !== '' && this.user.senha !== '') {
       this._CadastroFuncionarioService.salvarFuncionario(this.user).subscribe(
         resp => {
-          this.toastr.success('contato salvo', 'SUCESSO')
+          this._alert.sucess('Sucesso', 'Funcionario salvo com sucesso');
         },
         erro => {
-          this.toastr.error('erro ao cadastrar', 'ERRO')
+          this._alert.erro('Erro', 'Erro ao salvar');
         }
       )
     } else {

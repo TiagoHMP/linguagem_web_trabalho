@@ -1,15 +1,32 @@
+<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
 <div class="col-md-2 menu">
     <div class="nome-prog">
         <h2>PPonto</h2>
         <i class="fa fa-caret-square-o-down" *ngIf="!menuAberto" (click)="toogleMenu()"></i>
         <i class="fa fa-caret-square-o-up" *ngIf="menuAberto" (click)="toogleMenu()"></i>
     </div>
-    <div class="conteudo-menu ">
-        <div class="menu-itens " #menuItem>
-            <a class="item " [routerLink]="[ 'controle-horas'] " routerLinkActive="active-link "> Controle de horas </a>
-            <a class="item " [routerLink]="[ 'cadastro-cliente'] " routerLinkActive="active-link ">Cadastro de Cliente</a>
-            <a class="item " [routerLink]="[ 'cadastro-funcionario'] " routerLinkActive="active-link ">Cadastro de Funcionário</a>
-            <a class="item " [routerLink]="[ 'relatorio'] " routerLinkActive="active-link ">Relatórios</a>
+    <div class="conteudo-menu">
+        <div class="menu-itens" #menuItem>
+            <a class="item col-md-12" [routerLink]="[ 'controle-horas'] " routerLinkActive="active-link ">
+                <i class="fa fa-clock-o icone" aria-hidden="true"></i>
+                <span class="col-md-9 texto">Tempo</span>
+            </a>
+
+            <a class="item col-md-12" [routerLink]="[ 'cadastro-cliente'] " routerLinkActive="active-link ">
+                <i class="fa fa-id-card icone" aria-hidden="true"></i>
+                <span class="col-md-9 texto">Cadastro de Cliente</span>
+            </a>
+
+            <a class="item col-md-12" [routerLink]="[ 'cadastro-funcionario'] " routerLinkActive="active-link ">
+                <i class="fa fa-id-card icone" aria-hidden="true"></i>
+                <span class="col-md-9 texto">Cadastro de Funcionário</span>
+            </a>
+
+            <a class="item col-md-12" [routerLink]="[ 'relatorio'] " routerLinkActive="active-link ">
+                <i class="fa fa-wpforms icone" aria-hidden="true"></i>
+                <span class="col-md-9 texto">Relatórios</span>
+            </a>
+
         </div>
     </div>
 </div>

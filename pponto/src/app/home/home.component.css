@@ -1,12 +1,7 @@
 
-a{
-    display: flex;
-    justify-content: center;
+a{     
     text-decoration: none;
-    color: black;
-    font-weight: 500;   
-    border-bottom: 1px solid black;
-    padding: 5px 0;    
+    color: black;             
 }
 
 h2{
@@ -27,39 +22,58 @@ h2{
     top: 0;
     left: 0;
     bottom: 0;           
-    background: lightskyblue;     
+    background: #CCCCCC;         
     z-index: 999;      
+    min-width: 140px;
 }
 
 .conteudo-menu{
     position: relative;         
-    left: 0 ;
+    left: 0 ;      
 }
 
 .menu-itens{     
     position: absolute;
     display: flex;
     justify-content: center;    
-    flex-direction: column;
-    font-size: 16px;    
+    flex-direction: column;    
+    align-items: center;
     min-height: 50px; 
     width: 100%;
-    padding: 0;     
+    padding: 0;      
+    background: #CCCCCC;             
+}
+
+.icone{
+    flex: 1;    
+}
+
+.texto{
+    flex: 8;
 }
 
 .item{    
-    display: flex;        
+    display: flex;                      
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;    
-    text-align: center;          
+    padding: 5px 0 5px 10px;
+    font-size: 12px;            
+    font-weight: 600;
+    font-family: Roboto, Helvetica, sans-serif;            
 }
 
 .item:hover{   
     cursor: pointer;        
 }
 
-.active-link, .item:hover{    
-    background: mediumseagreen;
+.item:hover{    
+    color: gray;
+}
+
+.active-link{
+    /* background: mediumseagreen;     */
+    background: rgba(0, 0, 0, .2);         
+    border-radius: 10px;
 }
 
 .nome-prog{
@@ -68,8 +82,8 @@ h2{
     align-items: center;    
     align-content: center;
     text-align: center;
-    height: 50px;
-    border-bottom: 1px solid black;
+    height: 50px;    
+    font-family: 'Baloo', cursive; 
 }
 
 @media screen and (max-width:768px){
@@ -78,8 +92,7 @@ h2{
         width: 100%;       
     }
 
-    .menu-itens{
-        background: lightskyblue; 
+    .menu-itens{        
         top: -500px;            
     }
 
