@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   logar() {
-    this.createUserAnSetFormValues();
+    this.createUserAndSetFormValues();
     this._loginService.verificarLogin(this.usuario)
       .subscribe(
         resp => {
@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  private createUserAnSetFormValues() {
+  private createUserAndSetFormValues() {
     this.usuario = new Usuario();
     this.usuario.login = this.loginForm.controls['login'].value
     this.usuario.senha = this.loginForm.controls['senha'].value
