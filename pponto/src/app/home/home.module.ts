@@ -6,6 +6,7 @@ import { ControleTempoComponent } from './controle-tempo/controle-tempo.componen
 import { FormsModule } from '@angular/forms';
 import { NovaTarefaComponent } from './controle-tempo/nova-tarefa/nova-tarefa.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { CadastroProjetoComponent } from './cadastro-projeto/cadastro-projeto.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { BrowserModule } from '@angular/platform-browser';
     RelatorioComponent,
     ControleTempoComponent,
     NovaTarefaComponent,
+    CadastroProjetoComponent,
   ],
   imports: [
     FormsModule,

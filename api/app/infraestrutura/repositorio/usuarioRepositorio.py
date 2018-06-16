@@ -34,7 +34,8 @@ class UsuarioRepositorio:
             cadastrar = Usuario(
                 login = user['login'].upper(),
                 senha = encodeSenha,
-                tipoUsuario = user['tipoUsuario'].upper()
+                tipoUsuario = user['tipoUsuario'].upper(),
+                matricula = user['matricula']
             )
 
             cadastrar.save()

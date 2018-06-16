@@ -2,6 +2,7 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { CadastroFuncionarioService } from './cadastro-funcionario.service'
 import { Usuario } from '../../entidades/usuario';
 import { AlertService } from '../../shared/alert.service'
+import { TipoUsuarioEnum } from '../../shared/enum/tiposUsuario'
 
 @Component({
   selector: 'app-cadastro-funcionario',
@@ -10,9 +11,8 @@ import { AlertService } from '../../shared/alert.service'
   providers: [CadastroFuncionarioService, AlertService]
 })
 export class CadastroFuncionarioComponent {
-
+  enum = TipoUsuarioEnum
   user = new Usuario();
-  usuario2 = new Usuario(1, 'rafael', '1234', 'M')
 
   constructor(
     private _CadastroFuncionarioService: CadastroFuncionarioService,
@@ -24,6 +24,7 @@ export class CadastroFuncionarioComponent {
       this._CadastroFuncionarioService.salvarFuncionario(this.user).subscribe(
         resp => {
           this._alert.sucess('Sucesso', 'Funcionario salvo com sucesso');
+          this.limparCampos();
         },
         erro => {
           this._alert.erro('Erro', 'Erro ao salvar');
@@ -32,6 +33,10 @@ export class CadastroFuncionarioComponent {
     } else {
       alert('campos devem estar preenchidos')
     }
+  }
+
+  limparCampos() {
+    this.user = new Usuario();
   }
 
 }

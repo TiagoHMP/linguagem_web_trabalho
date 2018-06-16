@@ -3,20 +3,23 @@ from app.dominio.service.encryptService import encryptService
 class Usuario:
     id = ''
     login = ''
+    matricula = ''
     senha = ''
     tipoUsuario = ''
 
-    def __init__(self, id='', login='', senha='', tipo=''):
+    def __init__(self, id='', login='', senha='', tipo='', matricula=''):
         self.id = id
         self.login = login
         self.senha = senha
         self.tipoUsuario = tipo
+        self.matricula = matricula
 
     def get_values(self):
         return{
             "id":self.id,
             "login": self.login,
-            "tipoUsuario":self.tipoUsuario
+            "tipoUsuario":self.tipoUsuario,
+            "matricula": self.matricula
         }
 
     def validar_usuario(self, usuario):

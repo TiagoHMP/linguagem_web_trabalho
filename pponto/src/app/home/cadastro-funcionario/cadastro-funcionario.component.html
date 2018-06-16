@@ -3,7 +3,7 @@
   <div class="form-group col-md-12 row">
     <div class="col-md-12">
       <label for=""> Numero da Matricula</label>
-      <input type="matricula" class="form-control" placeholder="Matrícula">
+      <input type="matricula" class="form-control" name="matricula" [(ngModel)]="user.matricula" placeholder="Matrícula">
     </div>
   </div>
 
@@ -11,6 +11,17 @@
     <div class="col-md-12">
       <label for=""> Nome </label>
       <input type="nome" class="form-control" name="nome" [(ngModel)]="user.login" placeholder="Nome">
+    </div>
+  </div>
+
+  <div class="form-group col-md-12 row">
+    <div class="col-md-12">
+      <label>Tipo de usuário:</label>
+      <select name="tpousuario" class="form-control" [(ngModel)]="user.tipoUsuario">
+        <option [value]="enum.coordenador">Coordernador</option>
+        <option [value]="enum.administrador">Administrador</option>
+        <option [value]="enum.usuario">Usuário</option>
+      </select>
     </div>
   </div>
 
