@@ -12,7 +12,6 @@ export class LocalStorageService {
 
   setUser(usuario: Usuario) {
     localStorage.setItem(this.usuario, JSON.stringify(usuario));
-    console.log(usuario);
   }
 
 }

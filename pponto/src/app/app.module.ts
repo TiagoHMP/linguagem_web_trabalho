@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './config/app.routing';
 import { homeComponent } from './home/home.component';
+import { AuthGuardService } from './guards/auth-guard.service';
+import { LoginService } from './login/login.service';
 
 
 
@@ -29,7 +31,10 @@ import { homeComponent } from './home/home.component';
     BrowserAnimationsModule,
     ToastModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    AuthGuardService,
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

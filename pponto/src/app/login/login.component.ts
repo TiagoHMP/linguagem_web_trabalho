@@ -5,23 +5,25 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from './login.service';
 import { Usuario } from '../entidades/usuario';
 import { AlertService } from '../shared/alert.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [LoginService, LocalStorageService, AlertService]
+  providers: [LocalStorageService, AlertService]
 })
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  usuario: Usuario
+  usuario: Usuario;
 
   constructor(
     private formBuilder: FormBuilder,
     private _loginService: LoginService,
     private _localStorageService: LocalStorageService,
-    private _alert: AlertService
+    private _alert: AlertService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -35,9 +37,12 @@ export class LoginComponent implements OnInit {
       .subscribe(
         resp => {
           this._localStorageService.setUser(resp.data);
+          this._loginService.setUserAutenticado();
+          this.router.navigate(['home/controle-horas'])
         },
         err => {
           this._alert.erro('Erro ao logar', 'Problema ao efetuar o login, verifique se os dados estão corretos')
+          this._loginService.setUserNotAutenticado();
         }
       )
   }

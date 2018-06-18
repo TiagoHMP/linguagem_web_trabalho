@@ -3,7 +3,6 @@ from app.dominio.entidade.usuario import Usuario as UsuarioEntity
 from app.dominio.service.encryptService import encryptService
 
 
-
 class UsuarioRepositorio:
 
     def __init__(self):
@@ -41,3 +40,13 @@ class UsuarioRepositorio:
             cadastrar.save()
         else:
             return UsuarioEntity()
+
+    @staticmethod
+    def criarAdmin():
+        usuario = {
+            'login': 'admin',
+            'senha': '12345',
+            'tipoUsuario':'M',
+            'matricula': 0
+        }
+        UsuarioRepositorio.cadastrar_usuario(usuario)

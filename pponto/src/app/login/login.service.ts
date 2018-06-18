@@ -9,11 +9,24 @@ import { Usuario } from '../entidades/usuario';
 @Injectable()
 export class LoginService {
 
+  usuarioAutenticado: boolean = false;
   private loginUrl = environment.apiUrl + '/login';
 
   constructor(
     private http: Http
   ) { }
+
+  setUserAutenticado() {
+    this.usuarioAutenticado = true;
+  }
+
+  setUserNotAutenticado() {
+    this.usuarioAutenticado = false;
+  }
+
+  getUsuarioIsAutentidao() {
+    return this.usuarioAutenticado;
+  }
 
   verificarLogin(usuario: Usuario): Observable<any> {
     return this.http.post(this.loginUrl, usuario)
