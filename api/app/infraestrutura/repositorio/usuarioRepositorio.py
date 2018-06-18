@@ -44,6 +44,7 @@ class UsuarioRepositorio:
     @staticmethod
     def criarAdmin():
         usuario = {
+            'id': '',
             'login': 'admin',
             'senha': '12345',
             'tipoUsuario':'M',
