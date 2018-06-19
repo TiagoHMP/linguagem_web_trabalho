@@ -12,3 +12,10 @@ def novo_cliente():
 @app.route('/cliente/todos', methods=['GET'])
 def buscarTodosClientes():
     return jsonpickle.encode( _repositorio.buscarTodosClientes())
+
+
+@app.route('/cliente/buscarpornome', methods=['POST'])
+def bucarClientePorNome():
+    content = request.json
+    retorno = _repositorio.buscaClientePorNome(content['nome'])
+    return jsonpickle.encode(retorno)

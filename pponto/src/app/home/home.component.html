@@ -5,6 +5,9 @@
         <i class="fa fa-caret-square-o-down" *ngIf="!menuAberto" (click)="toogleMenu()"></i>
         <i class="fa fa-caret-square-o-up" *ngIf="menuAberto" (click)="toogleMenu()"></i>
     </div>
+    <div class="nome-user col-md-12">
+        <span>Olá {{usuario.login}}</span>
+    </div>
     <div class="conteudo-menu">
         <div class="menu-itens" #menuItem>
             <a class="item col-md-12" [routerLink]="[ 'controle-horas'] " routerLinkActive="active-link ">

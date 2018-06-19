@@ -1,3 +1,36 @@
-<p>
-  cadastro-projeto works!
-</p>
+<form action="" class="card offset-md-1 col-md-8">
+
+  <div class="form-group col-md-12 row itens-cadastro">
+    <div class="col-md-12">
+      <label for=""> Nome do projeto </label>
+      <input type="email" name="nome" class="form-control" id="Nome" [(ngModel)]="projeto.nome" placeholder="Nome">
+    </div>
+  </div>
+
+  <div class="form-group col-md-12 row">
+    <div class="col-md-12">
+      <label for=""> Nome do cliente </label>
+      <div class="row noMargin">
+        <input type="text" name="filtroCliente" class="col-md-9 form-control" id="Nome" [(ngModel)]="nomeCliente" placeholder="ex.: Girardi">
+        <input type="button" class="col-md-3 btn btn-outline-success" value="Buscar" (click)="buscarCliente(nomeCliente)">
+      </div>
+    </div>
+    <div class="col-md-12">
+      <app-lista-cliente [cliente]="cliente" [projeto]="projeto" *ngFor="let cliente of clientes"></app-lista-cliente>
+    </div>
+  </div>
+
+  <div class="form-group col-md-12 row itens-cadastro">
+    <div class="col-md-12">
+      <label for=""> Descrição do projeto </label>
+      <textarea name="" id="" class="col-md-12 form-control"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group col-md-12 row">
+    <div class="col-md-12 botoes">
+      <button class="btn btn-success col-md-5" (click)="cadastrar()"> Cadastrar </button>
+      <button class="btn btn-danger col-md-5"> Cancelar </button>
+    </div>
+  </div>
+</form>

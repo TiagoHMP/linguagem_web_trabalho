@@ -1,5 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { Usuario } from '../entidades/usuario';
+import { LocalStorageService } from '../shared/local-storage.service';
 
 @Component({
     selector: 'app-home',
@@ -10,15 +12,19 @@ export class homeComponent implements OnInit {
 
     @ViewChild('menu') menu: ElementRef;
     @ViewChild('menuItem') menuItem: ElementRef;
+    usuario: Usuario
     menuAberto: boolean;
 
     constructor(
-        private route: Router
+        private route: Router,
+        private _localStorageService: LocalStorageService
     ) {
         this.menuAberto = !this.detectMobile();
     }
 
     ngOnInit() {
+        this.usuario = this._localStorageService.getUser();
+        console.log(this.usuario);
     }
 
     goTo(url: string) {

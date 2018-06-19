@@ -15,4 +15,10 @@ export class ClienteServiceService {
     return this.http.post(this.url + '/novo', cliente);
   }
 
+  buscarClientesPorNome(nome: string) {
+    let busca = { "nome": nome };
+    return this.http.post(this.url + '/buscarpornome', busca)
+      .map(resp => resp.json());
+  }
+
 }

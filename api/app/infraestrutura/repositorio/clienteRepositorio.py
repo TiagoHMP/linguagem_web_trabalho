@@ -20,3 +20,14 @@ class clienteRepositorio():
        retorno = clienteMap.select().where(clienteMap.id > 0)
        retorno = list(retorno)
        return retorno
+
+
+    @staticmethod
+    def buscaClientePorNome(nome):
+        clientes = clienteMap.select().where(clienteMap.nome.contains(nome))
+        retorno = []
+        for cliente in clientes:
+            newCliente = cliente.getValues()
+            retorno.append(newCliente.getValues())
+
+        return list(retorno)

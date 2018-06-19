@@ -86,9 +86,17 @@ h2{
     font-family: 'Baloo', cursive; 
 }
 
+.nome-user{    
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    text-align: center;
+    font-family: 'Baloo', cursive;     
+}
+
 @media screen and (max-width:768px){
     .menu{
-        height: 50px; 
+        height: 75px; 
         width: 100%;       
     }
 
@@ -97,7 +105,7 @@ h2{
     }
 
     .conteudo{
-        margin-top: 70px;
+        margin-top: 80px;
     }
 
     .nome-prog{
