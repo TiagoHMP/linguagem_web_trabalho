@@ -22,7 +22,6 @@ export class CadastroClienteComponent implements OnInit {
 
 
   cadastrar() {
-    console.log(this.cliente);
     this._service.salvarCliente(this.cliente).subscribe(
       resp => {
         this._alert.sucess('Sucesso', 'Cliente salvo com sucesso');

@@ -24,7 +24,6 @@ export class homeComponent implements OnInit {
 
     ngOnInit() {
         this.usuario = this._localStorageService.getUser();
-        console.log(this.usuario);
     }
 
     goTo(url: string) {

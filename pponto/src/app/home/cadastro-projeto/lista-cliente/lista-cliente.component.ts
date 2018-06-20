@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Cliente } from '../../../entidades/cliente';
 import { Projeto } from '../../../entidades/projeto';
 
@@ -13,9 +13,14 @@ export class ListaClienteComponent implements OnInit {
   @Input() projeto: Projeto
   constructor() { }
 
-  ngOnInit() {
-    console.log('cliente')
-    console.log(this.cliente);
+  ngOnInit() { }
+
+  adicionarCliente() {
+    this.projeto.cliente = this.cliente;
+  }
+
+  verificaSelecionado(): boolean {
+    return this.projeto.cliente.apelido.match(this.cliente.apelido) ? true : false;
   }
 
 }
