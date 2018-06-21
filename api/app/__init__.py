@@ -18,13 +18,13 @@ from app.controller import projetoController
 from app.infraestrutura.mapping.usuarioMap import Usuario
 from app.infraestrutura.mapping.clienteMap import cliente
 from app.infraestrutura.mapping.tarefaMap import tarefa
-from app.infraestrutura.mapping.projetoMap import projetoMap
+from app.infraestrutura.mapping.projetoMap import projetoMap as projeto
 
 try:
     Usuario.create_table()
     cliente.create_table()
     tarefa.create_table()
-    projetoMap.create_table()
+    projeto.create_table()
 
 except peewee.OperationalError:
     print('tabelas ja existe')

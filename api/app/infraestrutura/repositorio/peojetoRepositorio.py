@@ -8,9 +8,9 @@ class projetoRepositorio():
 
     @staticmethod
     def saveProject(projeto):
-        newCliente = clienteMap.get(clienteMap.id == projeto['id'])
+        newCliente = clienteMap.get(clienteMap.id == projeto['cliente']['id'])
         newProject = projetoMap(
-            cliente=projeto['cliente'],
+            cliente=newCliente,
             nome=projeto['nome'],
             descricao=projeto['descricao'],
         )

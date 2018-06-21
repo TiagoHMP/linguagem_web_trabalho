@@ -1,15 +1,11 @@
-from app import app, request, abort
-from app.dto.responseDTO import Response
+from app import app, request
+from app.infraestrutura.repositorio.peojetoRepositorio import projetoRepositorio
 import jsonpickle
 
 
-@app.route('/projeto/novo', methods=['POST'])
+@app.route('/projeto/salvar', methods=['POST'])
 def novoProjeto():
     content = request.json
-    dados = _repositorio.buscar_usuario(content)
+    response = projetoRepositorio.saveProject(content)
+    return jsonpickle.encode(response)
 
-    if dados.get_login() == '':
-        return abort(401)
-    else:
-        usuario = Response(dados.get_values())
-        return jsonpickle.encode(usuario.get_data())
