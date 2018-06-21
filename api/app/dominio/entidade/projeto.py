@@ -15,7 +15,17 @@ class projeto():
     def getValues(self):
         return {
             "id": self.id,
-            "cliente": self.cliente.getValues(),
+            "cliente": self.cliente,
             "nome": self.nome,
+            "descricao": self.descricao,
+        }
+
+    def getResponseValues(self):
+        cliente = self.cliente[0].getValues()
+
+        return {
+            "id": self.id[0],
+            "cliente": self.cliente[0],
+            "nome": self.nome[0],
             "descricao": self.descricao,
         }

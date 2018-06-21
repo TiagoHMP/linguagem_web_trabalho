@@ -21,4 +21,9 @@ export class ClienteServiceService {
       .map(resp => resp.json());
   }
 
+  buscarTodosClientes() {
+    return this.http.get(this.url + '/todos')
+      .map(resp => resp.json());
+  }
+
 }

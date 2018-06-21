@@ -3,6 +3,6 @@
     <input type="button" class="btn btn-success" value="nova tarefa" (click)="criarTarefa()">
   </div>
   <div class="col-md-12 conteudo" *ngFor="let tarefa of tarefas">
-    <app-nova-tarefa [tarefa]="tarefa" (removerTarefa)="removerTarefa($event)"></app-nova-tarefa>
+    <app-nova-tarefa [tarefa]="tarefa" [clientes]="clientes" (removerTarefa)="removerTarefa($event)"></app-nova-tarefa>
   </div>
 </form>

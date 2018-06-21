@@ -13,7 +13,8 @@ export class ListaClienteComponent implements OnInit {
   @Input() projeto: Projeto
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
   adicionarCliente() {
     this.projeto.cliente = this.cliente;

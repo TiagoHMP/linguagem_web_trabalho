@@ -9,3 +9,10 @@ def novoProjeto():
     response = projetoRepositorio.saveProject(content)
     return jsonpickle.encode(response)
 
+
+@app.route('/projeto/busca-projeto-por-cliente/', methods=['GET'])
+def buscarProjetoPorCliente():
+    content = request.args.get('idCliente')
+    response = projetoRepositorio.getProjetoPorIdCliente(content)
+    return jsonpickle.encode(response)
+

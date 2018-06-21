@@ -21,10 +21,7 @@ export class CadastroProjetoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
   }
-
-
 
   buscarCliente(nome: string) {
     this._clienteService.buscarClientesPorNome(nome).subscribe(
@@ -41,4 +38,5 @@ export class CadastroProjetoComponent implements OnInit {
       err => { }
     );
   }
+
 }

@@ -18,4 +18,11 @@ export class CadastrarProjetoService {
       .map(resp => resp.json())
   }
 
+  buscarProjetoPorIdCliente(id: string) {
+    return this.http.get(`${this.url}/busca-projeto-por-cliente/?idCliente=${id}`)
+      .map(
+        resp => resp.json()
+      );
+  }
+
 }

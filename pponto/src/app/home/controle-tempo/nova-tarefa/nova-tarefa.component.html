@@ -1,12 +1,10 @@
 <div class="row col-md-12 conteudo-nova-tarefa card">
-  <select name="" class="form-control col-md-3">
-    <option value="" disabled> selecione o cliente </option>
-    <option value=""> Cliente 1 </option>
+  <select name="" [ngModel]="tarefa.cliente" (ngModelChange)="buscarProjetos($event)" class="form-control col-md-3">
+    <option [value]="cliente.id" *ngFor="let cliente of clientes"> {{cliente.apelido}} </option>
   </select>
 
-  <select name="" class="form-control col-md-3">
-    <option value="" disabled> selecione o projeto </option>
-    <option value=""> projeto 1 </option>
+  <select name="projetos" [(ngModel)]="tarefa.projeto" class="form-control col-md-3">
+    <option [value]="projeto" *ngFor="let projeto of projetos"> {{projeto.nome}} </option>
   </select>
 
   <div class="iten form-control col-md-3">

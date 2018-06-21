@@ -1,13 +1,16 @@
+import { Cliente } from "./cliente";
+import { Projeto } from "./projeto";
+
 export class Tarefa {
-    idCliente: number;
-    idProjeto: number;
+    cliente: Cliente;
+    projeto: Projeto;
     horaInicio: string;
     horaFim: string;
     data: Date;
 
     constructor() {
-        this.idCliente = 0;
-        this.idProjeto = 0;
+        this.cliente = new Cliente();
+        this.projeto = new Projeto();
         this.horaFim = '0';
         this.horaInicio = '0';
         this.data = null;
