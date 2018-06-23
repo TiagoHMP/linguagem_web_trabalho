@@ -1,6 +1,8 @@
+from app.infraestrutura.mapping.sessaoUser import SessaoUser
 from app.infraestrutura.mapping.usuarioMap import Usuario
 from app.dominio.entidade.usuario import Usuario as UsuarioEntity
 from app.dominio.service.encryptService import encryptService
+from app.dominio.service.tokenService import TokenService
 
 
 class UsuarioRepositorio:
@@ -10,11 +12,18 @@ class UsuarioRepositorio:
 
     @staticmethod
     def buscar_usuario(user):
+        token = TokenService.generateToken()
         try:
             savedUser = Usuario.get(Usuario.login == user['login'].upper())
             resposta = UsuarioEntity(user['id'], user['login'], user['senha'], user['tipoUsuario'])
 
+            sessao = SessaoUser(
+                usuario=savedUser,
+                token=token
+            )
+
             if resposta.validar_usuario(savedUser):
+                sessao.save()
                 return savedUser.getValues()
 
             return UsuarioEntity()

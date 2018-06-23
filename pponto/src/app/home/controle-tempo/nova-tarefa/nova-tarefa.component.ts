@@ -29,7 +29,6 @@ export class NovaTarefaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    throw new Error("Method not implemented.");
   }
 
   marcarTempo() {

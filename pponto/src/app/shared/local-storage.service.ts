@@ -4,7 +4,7 @@ import { Usuario } from '../entidades/usuario'
 @Injectable()
 export class LocalStorageService {
 
-  usuario = 'SalvarUsuario';
+  usuario = 'Usuario';
 
   constructor(
 
@@ -18,4 +18,7 @@ export class LocalStorageService {
     return JSON.parse(localStorage.getItem(this.usuario))
   }
 
+  deleteUser() {
+    localStorage.clear();
+  }
 }

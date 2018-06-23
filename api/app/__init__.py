@@ -19,15 +19,19 @@ from app.infraestrutura.mapping.usuarioMap import Usuario
 from app.infraestrutura.mapping.clienteMap import cliente
 from app.infraestrutura.mapping.tarefaMap import tarefa
 from app.infraestrutura.mapping.projetoMap import projetoMap as projeto
+from app.infraestrutura.mapping.sessaoUser import SessaoUser
 
 try:
     Usuario.create_table()
     cliente.create_table()
     tarefa.create_table()
     projeto.create_table()
-
+    SessaoUser.create_table()
 except peewee.OperationalError:
     print('tabelas ja existe')
 
 from .infraestrutura.repositorio.usuarioRepositorio import UsuarioRepositorio
-UsuarioRepositorio.criarAdmin()
+try:
+    UsuarioRepositorio.criarAdmin()
+except:
+    print('usuario existente')

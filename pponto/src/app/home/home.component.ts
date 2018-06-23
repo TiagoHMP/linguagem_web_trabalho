@@ -44,6 +44,11 @@ export class homeComponent implements OnInit {
         this.menuItem.nativeElement.style.top = "-500px";
     }
 
+    logout() {
+        this._localStorageService.deleteUser();
+        this.route.navigate(['/login'])
+    }
+
     private abreMenu() {
         this.menuItem.nativeElement.style.top = "0px";
     }

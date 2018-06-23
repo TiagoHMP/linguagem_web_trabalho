@@ -24,7 +24,7 @@ export class LoginService {
     this.usuarioAutenticado = false;
   }
 
-  getUsuarioIsAutentidao() {
+  getUsuarioIsAutentidao(): boolean {
     return this.usuarioAutenticado;
   }
 

@@ -1,5 +1,5 @@
 <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
-<div class="col-md-2 menu">
+<div class="menu">
     <div class="nome-prog">
         <h2>PPonto</h2>
         <i class="fa fa-caret-square-o-down" *ngIf="!menuAberto" (click)="toogleMenu()"></i>
@@ -7,6 +7,7 @@
     </div>
     <div class="nome-user col-md-12">
         <span>Olá {{usuario.login}}</span>
+        <i class="fa fa-sign-out" (click)="logout()" aria-hidden="true"></i>
     </div>
     <div class="conteudo-menu">
         <div class="menu-itens" #menuItem>
@@ -38,6 +39,6 @@
         </div>
     </div>
 </div>
-<div class="offset-md-2 col-md-9 conteudo ">
+<div class="conteudo">
     <router-outlet></router-outlet>
 </div>
