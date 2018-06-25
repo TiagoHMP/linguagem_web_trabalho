@@ -9,8 +9,8 @@ def logar():
     content = request.json
     dados = _repositorio.buscar_usuario(content)
 
-    if dados.get_login() == '':
+    if dados['usuario'].get_login() == '':
         return abort(401)
     else:
-        usuario = Response(dados.get_values())
-        return jsonpickle.encode(usuario.get_data())
+        resposta = Response(dados)
+        return jsonpickle.encode(resposta.get_data(), unpicklable=False)

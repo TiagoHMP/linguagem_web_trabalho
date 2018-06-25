@@ -17,16 +17,16 @@ class UsuarioRepositorio:
             savedUser = Usuario.get(Usuario.login == user['login'].upper())
             resposta = UsuarioEntity(user['id'], user['login'], user['senha'], user['tipoUsuario'])
 
-            sessao = SessaoUser(
-                usuario=savedUser,
-                token=token
-            )
-
             if resposta.validar_usuario(savedUser):
+                sessao = SessaoUser(
+                    usuario=savedUser,
+                    token=token
+                )
                 sessao.save()
-                return savedUser.getValues()
+                return sessao.getValues()
 
             return UsuarioEntity()
+
 
         except:
             return UsuarioEntity()

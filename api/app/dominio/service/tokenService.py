@@ -1,10 +1,8 @@
-from app.dominio.service.encryptService import encryptService
-from random import randint
+import secrets
 
 class TokenService:
 
     @staticmethod
     def generateToken():
-        newToken = randint(10, 99999999999)
-        newToken = str(newToken)
-        return encryptService.encrypt(newToken)
+        newToken  = secrets.token_hex(20)
+        return newToken

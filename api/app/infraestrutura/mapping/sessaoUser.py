@@ -8,6 +8,11 @@ class SessaoUser(peewee.Model):
     token = peewee.TextField()
 
 
+    def getValues(self):
+        return {
+            "usuario": self.usuario.getValues(),
+            "token": self.token
+        }
+
     class Meta:
         database = db
-
