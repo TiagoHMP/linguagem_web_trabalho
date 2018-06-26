@@ -20,9 +20,6 @@ def logar():
 def verificarUsuarioLogado():
     content = request.json
     response = _repositorio.verificarUsuarioLogado(content)
-    if(response['id'] != ''):
-        return jsonpickle.encode(response, unpicklable=False)
-
-    return abort(401)
+    return jsonpickle.encode(response, unpicklable=False)
 
 

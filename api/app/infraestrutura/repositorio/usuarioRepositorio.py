@@ -3,7 +3,7 @@ from app.infraestrutura.mapping.usuarioMap import Usuario
 from app.dominio.entidade.usuario import Usuario as UsuarioEntity
 from app.dominio.service.encryptService import encryptService
 from app.dominio.service.tokenService import TokenService
-from app.dominio.entidade.sessao import Sessao
+from app.dominio.entidade.sessao import Sessao as SessaoEntity
 
 
 
@@ -70,8 +70,8 @@ class UsuarioRepositorio:
             newUser = Usuario.get(Usuario.id == sessao['usuario']['id'])
             newSessao = SessaoUser.get(SessaoUser.usuario == newUser and SessaoUser.token == sessao['token'])
             if(newSessao.id != ''):
-                return sessao
+                return True
 
-            return sessao()
+            return False
         except:
-            return Sessao()
+            return False

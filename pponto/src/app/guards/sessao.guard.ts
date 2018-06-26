@@ -21,11 +21,19 @@ export class SessaoGuard implements CanActivate {
     this.sessao.token = this.localStorageService.getToken() || '';
     this.sessao.usuario = this.localStorageService.getUser() || new Usuario();
 
-    if (this.loginService.verificaUsuarioLogado(this.sessao)) {
-      return true;
-    }
-
-    this.route.navigate(['/login']);
-    return false;
+    return new Promise((resolve, reject) => {
+      this.loginService.verificaUsuarioLogado(this.sessao)
+        .subscribe(
+          resp => {
+            if (!resp) {
+              this.route.navigate(['/login'])
+            }
+            resolve(resp);
+          },
+          err => {
+            console.log('erro');
+          })
+    })
+    // return false;
   }
 }

@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5d447bd-077f-4a77-9a0f-16e4487c3af7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/dominio/entidade/sessao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/loginController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/loginController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/tarefaController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/tarefaController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dominio/entidade/sessao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dominio/entidade/sessao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pponto" beforeDir="false" afterPath="$PROJECT_DIR$/pponto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/config/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/config/app.routing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/guards/auth-guard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/guards/auth-guard.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/home/cadastro-cliente/cadastro-cliente.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/home/cadastro-cliente/cadastro-cliente.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/home/cadastro-funcionario/cadastro-funcionario.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/home/cadastro-funcionario/cadastro-funcionario.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/home/cadastro-funcionario/cadastro-funcionario.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/home/cadastro-projeto/cadastro-projeto.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/home/cadastro-projeto/cadastro-projeto.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/login/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/login/login.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pponto/src/app/guards/sessao.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/guards/sessao.guard.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,10 +17,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/api$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1530032832604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/api$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1530036429279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/apí$apí.coverage" NAME="apí Coverage Results" MODIFIED="1525262268454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/api$Flask__app___init___py_.coverage" NAME="Flask (app/__init__.py) Coverage Results" MODIFIED="1530032862640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/api$apí.coverage" NAME="apí Coverage Results" MODIFIED="1530035602056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/api$apí.coverage" NAME="apí Coverage Results" MODIFIED="1530041164621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -46,7 +37,20 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="loginController.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controller/loginController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,11 +96,11 @@
         <option value="$PROJECT_DIR$/app/controller/tarefaController.py" />
         <option value="$PROJECT_DIR$/app/controller/usuarioController.py" />
         <option value="$PROJECT_DIR$/app/controller/sessaoController.py" />
-        <option value="$PROJECT_DIR$/app/dominio/entidade/sessao.py" />
-        <option value="$PROJECT_DIR$/app/controller/loginController.py" />
-        <option value="$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/app/dominio/entidade/sessao.py" />
+        <option value="$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py" />
+        <option value="$PROJECT_DIR$/app/controller/loginController.py" />
       </list>
     </option>
   </component>
@@ -121,6 +125,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,11 +133,21 @@
               <item name="api" type="b2602c69:ProjectViewProjectNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.__init__">
+  <component name="RunManager" selected="Flask server.apí">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="apí" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -222,8 +237,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Python.__init__" />
+        <item itemvalue="Flask server.Flask (app.py)" />
       </list>
     </recent_temporary>
   </component>
@@ -251,6 +266,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-8" width="1319" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5015625" side_tool="true" weight="0.38901344" />
@@ -259,7 +275,7 @@
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.3142415" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32792208" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.21286735" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.22557585" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32936507" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -298,8 +314,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controller/loginController.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="157" />
+          <line>21</line>
+          <option name="timeStamp" value="159" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -309,7 +325,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="158" />
+      <option name="time" value="161" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -322,6 +338,16 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controller/loginController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/dominio/entidade/usuario.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -499,13 +525,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/werkzeug/serving.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/cli.py" />
-    <entry file="file://$PROJECT_DIR$/app/dominio/entidade/usuario.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/dto/responseDTO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -513,7 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/app.py" />
     <entry file="file://$PROJECT_DIR$/app/dominio/service/tokenService.py" />
     <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/projetoMap.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -561,20 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/sessaoUser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/dominio/entidade/sessao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/tarefaMap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -589,20 +593,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/loginController.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="21" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/sessaoUser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dominio/entidade/usuario.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dominio/entidade/sessao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
+        <state relative-caret-position="202">
+          <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/loginController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
