@@ -6,7 +6,6 @@ from app import db
 
 class tarefa(peewee.Model):
     id = peewee.IntegerField(primary_key=True, unique=True)
-    cliente = peewee.ForeignKeyField(cliente)
     usuario = peewee.ForeignKeyField(usuario)
     projeto = peewee.IntegerField()
     horaInicio = peewee.TextField()
@@ -20,7 +19,6 @@ class tarefa(peewee.Model):
     def getValues(self):
         return tarefaEntiti(
             self.id,
-            self.Cliente,
             self.usuario,
             self.Projeto,
             self.horaInicio,

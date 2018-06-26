@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e5d447bd-077f-4a77-9a0f-16e4487c3af7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/loginController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/loginController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dominio/service/tokenService.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dominio/service/tokenService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/infraestrutura/mapping/sessaoUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/infraestrutura/mapping/sessaoUser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pponto" beforeDir="false" afterPath="$PROJECT_DIR$/pponto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pponto/src/app/shared/local-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pponto/src/app/shared/local-storage.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/infraestrutura/mapping/tarefaMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/infraestrutura/mapping/tarefaMap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/infraestrutura/repositorio/tarefaRepositorio.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/infraestrutura/repositorio/tarefaRepositorio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pponto" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/apí$apí.coverage" NAME="apí Coverage Results" MODIFIED="1525262268454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/api$apí.coverage" NAME="apí Coverage Results" MODIFIED="1529932224070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/api$apí.coverage" NAME="apí Coverage Results" MODIFIED="1529974125550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -38,22 +34,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="usuarioRepositorio.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py">
+      <file leaf-file-name="tarefaController.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controller/tarefaController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginController.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controller/loginController.py">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            <state relative-caret-position="390">
+              <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tarefaRepositorio.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/tarefaRepositorio.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
-                <element signature="e#250#490#0" />
+                <element signature="e#0#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tarefaMap.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/tarefaMap.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="peojetoRepositorio.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/peojetoRepositorio.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#0#60#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,10 +120,7 @@
         <option value="$PROJECT_DIR$/app/controller/usuarioController.py" />
         <option value="$PROJECT_DIR$/app/dominio/service/encryptService.py" />
         <option value="$PROJECT_DIR$/app/infraestrutura/mapping/cliente.py" />
-        <option value="$PROJECT_DIR$/app/controller/tarefaController.py" />
-        <option value="$PROJECT_DIR$/app/infraestrutura/mapping/tarefaMap.py" />
         <option value="$PROJECT_DIR$/app/dominio/entidade/tarefa.py" />
-        <option value="$PROJECT_DIR$/app/infraestrutura/repositorio/tarefaRepositorio.py" />
         <option value="$PROJECT_DIR$/app/dominio/entidade/usuario.py" />
         <option value="$PROJECT_DIR$/app/infraestrutura/__init__.py" />
         <option value="$PROJECT_DIR$/app/controller/clienteController.py" />
@@ -108,6 +137,9 @@
         <option value="$PROJECT_DIR$/app/dominio/service/tokenService.py" />
         <option value="$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py" />
         <option value="$PROJECT_DIR$/app/controller/loginController.py" />
+        <option value="$PROJECT_DIR$/app/controller/tarefaController.py" />
+        <option value="$PROJECT_DIR$/app/infraestrutura/mapping/tarefaMap.py" />
+        <option value="$PROJECT_DIR$/app/infraestrutura/repositorio/tarefaRepositorio.py" />
       </list>
     </option>
   </component>
@@ -132,7 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,14 +171,26 @@
               <item name="api" type="b2602c69:ProjectViewProjectNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="cliente&#9;FILE&#9;file://C:/Users/rafael.barreto/workspace/linguagem_web_trabalho/api/app/infraestrutura/repositorio/clienteRepositorio.py&#10;tarefare&#9;FILE&#9;file://C:/Users/rafael.barreto/workspace/linguagem_web_trabalho/api/app/infraestrutura/repositorio/tarefaRepositorio.py&#10;tarefa&#9;FILE&#9;file://C:/Users/rafael.barreto/workspace/linguagem_web_trabalho/api/app/infraestrutura/mapping/tarefaMap.py&#10;tare&#9;FILE&#9;file://C:/Users/rafael.barreto/workspace/linguagem_web_trabalho/api/app/dominio/entidade/tarefa.py&#10;usu&#9;FILE&#9;file://C:/Users/rafael.barreto/workspace/linguagem_web_trabalho/api/app/dominio/entidade/usuario.py" />
+    <property name="SearchEverywhereHistoryKey" value="projeto&#9;FILE&#9;file:///home/rafa/workspace/linguagem_web_trabalho/api/app/infraestrutura/mapping/projetoMap.py&#10;tarefamap&#9;FILE&#9;file:///home/rafa/workspace/linguagem_web_trabalho/api/app/infraestrutura/mapping/tarefaMap.py&#10;tarefa&#9;FILE&#9;file:///home/rafa/workspace/linguagem_web_trabalho/api/app/infraestrutura/mapping/tarefaMap.py&#10;cliente&#9;FILE&#9;file://C:/Users/rafael.barreto/workspace/linguagem_web_trabalho/api/app/infraestrutura/repositorio/clienteRepositorio.py&#10;tarefare&#9;FILE&#9;file://C:/Users/rafael.barreto/workspace/linguagem_web_trabalho/api/app/infraestrutura/repositorio/tarefaRepositorio.py&#10;tare&#9;FILE&#9;file://C:/Users/rafael.barreto/workspace/linguagem_web_trabalho/api/app/dominio/entidade/tarefa.py&#10;usu&#9;FILE&#9;file://C:/Users/rafael.barreto/workspace/linguagem_web_trabalho/api/app/dominio/entidade/usuario.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pponto" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -207,7 +250,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-8" width="1318" height="784" extended-state="6" />
+    <frame x="0" y="28" width="1920" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -215,15 +258,15 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32954547" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.31733745" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.31685394" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32792208" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.30445153" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.19427083" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32936507" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.5026455" side_tool="true" weight="0.28038067" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4984375" weight="0.38390094" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4984375" visible="true" weight="0.38314608" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -246,33 +289,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/infraestrutura/mapping/tarefaMap.py</url>
-          <line>20</line>
+          <line>19</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controller/tarefaController.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/infraestrutura/repositorio/tarefaRepositorio.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/controller/projetoController.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/infraestrutura/repositorio/peojetoRepositorio.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/controller/projetoController.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="142" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="152" />
+          <line>14</line>
+          <option name="timeStamp" value="155" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -282,7 +310,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="153" />
+      <option name="time" value="156" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -295,13 +323,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controller/loginController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/loginController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -441,7 +462,6 @@
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/cli.py" />
     <entry file="file:///usr/lib/python3.6/base64.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/peewee.py" />
-    <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/tarefaRepositorio.py" />
     <entry file="file://$PROJECT_DIR$/app/dominio/service/encryptService.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -464,13 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/projetoController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/clienteRepositorio.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -485,16 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/tarefaMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/clienteMap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -502,24 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/peojetoRepositorio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/projetoMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py" />
     <entry file="file://$PROJECT_DIR$/app/controller/usuarioController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -541,20 +526,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/werkzeug/serving.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="269" selection-start-line="269" selection-end-line="269" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/cli.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="323" selection-start-line="323" selection-end-line="323" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/werkzeug/serving.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/cli.py" />
     <entry file="file://$PROJECT_DIR$/app/dominio/entidade/usuario.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -562,16 +535,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/sessaoUser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/sessaoUser.py" />
     <entry file="file://$PROJECT_DIR$/app/dto/responseDTO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -579,34 +543,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="1812" selection-start-line="1812" selection-end-line="1812" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/dominio/service/tokenService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/app.py" />
+    <entry file="file://$PROJECT_DIR$/app/dominio/service/tokenService.py" />
     <entry file="file://$PROJECT_DIR$/app/controller/loginController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#250#490#0" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/usuarioRepositorio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        <state relative-caret-position="225">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/projetoController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/peojetoRepositorio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/tarefaMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/infraestrutura/mapping/projetoMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/infraestrutura/repositorio/tarefaRepositorio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/tarefaController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
