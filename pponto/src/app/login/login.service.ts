@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment'
 import 'rxjs/add/operator/map'
 
 import { Usuario } from '../entidades/usuario';
+import { Sessao } from '../entidades/sessao';
 
 @Injectable()
 export class LoginService {
@@ -30,6 +31,11 @@ export class LoginService {
 
   verificarLogin(usuario: Usuario): Observable<any> {
     return this.http.post(this.loginUrl, usuario)
+      .map(resp => resp.json())
+  }
+
+  verificaUsuarioLogado(sessao: Sessao) {
+    return this.http.post(this.loginUrl + '/verificar', sessao)
       .map(resp => resp.json())
   }
 

@@ -25,6 +25,7 @@ export class CadastroClienteComponent implements OnInit {
     this._service.salvarCliente(this.cliente).subscribe(
       resp => {
         this._alert.sucess('Sucesso', 'Cliente salvo com sucesso');
+        this.cliente = new Cliente()
       },
       err => {
         this._alert.erro('ERRO', 'Erro ao salvar');

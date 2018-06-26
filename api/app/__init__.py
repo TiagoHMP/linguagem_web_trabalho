@@ -3,7 +3,6 @@ from flask_cors import CORS
 import peewee
 
 
-
 app = Flask(__name__)
 CORS(app)
 db = peewee.SqliteDatabase('pponto')
@@ -30,7 +29,7 @@ try:
 except peewee.OperationalError:
     print('tabelas ja existe')
 
-from .infraestrutura.repositorio.usuarioRepositorio import UsuarioRepositorio
+from app.infraestrutura.repositorio.usuarioRepositorio import UsuarioRepositorio
 try:
     UsuarioRepositorio.criarAdmin()
 except:

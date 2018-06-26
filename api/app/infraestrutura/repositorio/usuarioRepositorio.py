@@ -3,6 +3,8 @@ from app.infraestrutura.mapping.usuarioMap import Usuario
 from app.dominio.entidade.usuario import Usuario as UsuarioEntity
 from app.dominio.service.encryptService import encryptService
 from app.dominio.service.tokenService import TokenService
+from app.dominio.entidade.sessao import Sessao
+
 
 
 class UsuarioRepositorio:
@@ -60,3 +62,16 @@ class UsuarioRepositorio:
             'matricula': 0
         }
         UsuarioRepositorio.cadastrar_usuario(usuario)
+
+
+    @staticmethod
+    def verificarUsuarioLogado(sessao):
+        try:
+            newUser = Usuario.get(Usuario.id == sessao['usuario']['id'])
+            newSessao = SessaoUser.get(SessaoUser.usuario == newUser and SessaoUser.token == sessao['token'])
+            if(newSessao.id != ''):
+                return sessao
+
+            return sessao()
+        except:
+            return Sessao()

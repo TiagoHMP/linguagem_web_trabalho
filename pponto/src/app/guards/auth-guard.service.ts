@@ -3,17 +3,21 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from
 import { Observable } from 'rxjs/Observable';
 
 import { LoginService } from '../login/login.service'
+import { LocalStorageService } from '../shared/local-storage.service';
+import { Sessao } from '../entidades/sessao';
 
 @Injectable()
 export class AuthGuardService implements CanActivate {
 
-
   constructor(
     private route: Router,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private localStorageService: LocalStorageService
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
+
+
     if (this.loginService.getUsuarioIsAutentidao()) {
       return true;
     }

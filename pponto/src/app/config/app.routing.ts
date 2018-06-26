@@ -9,6 +9,7 @@ import { CadastroFuncionarioComponent } from '../home/cadastro-funcionario/cadas
 import { homeComponent } from './../home/home.component';
 import { CadastroProjetoComponent } from '../home/cadastro-projeto/cadastro-projeto.component';
 import { AuthGuardService } from '../guards/auth-guard.service';
+import { SessaoGuard } from '../guards/sessao.guard';
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -16,15 +17,15 @@ const routes: Routes = [
         path: 'home',
         component: homeComponent,
         children: [
-            { path: 'controle-horas', component: ControleTempoComponent, },
-            { path: 'relatorio', component: RelatorioComponent, },
-            { path: 'cadastro-cliente', component: CadastroClienteComponent, },
-            { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent, },
-            { path: 'cadastro-projeto', component: CadastroProjetoComponent, },
+            { path: 'controle-horas', component: ControleTempoComponent, canActivate: [SessaoGuard] },
+            { path: 'relatorio', component: RelatorioComponent, canActivate: [SessaoGuard] },
+            { path: 'cadastro-cliente', component: CadastroClienteComponent, canActivate: [SessaoGuard] },
+            { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent, canActivate: [SessaoGuard] },
+            { path: 'cadastro-projeto', component: CadastroProjetoComponent, canActivate: [SessaoGuard] },
             { path: '', redirectTo: 'controle-horas', pathMatch: 'full' },
             { path: '**', redirectTo: 'controle-horas', pathMatch: 'full' },
         ],
-        canActivate: [AuthGuardService]
+        canActivate: [SessaoGuard]
     },
     { path: '', component: LoginComponent },
     { path: '**', component: LoginComponent }

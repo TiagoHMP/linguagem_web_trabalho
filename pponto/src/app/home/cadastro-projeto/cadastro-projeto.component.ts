@@ -3,12 +3,13 @@ import { Cliente } from '../../entidades/cliente';
 import { Projeto } from '../../entidades/projeto';
 import { ClienteServiceService } from '../cadastro-cliente/cliente-service.service';
 import { CadastrarProjetoService } from './cadastrar-projeto.service';
+import { AlertService } from '../../shared/alert.service';
 
 @Component({
   selector: 'app-cadastro-projeto',
   templateUrl: './cadastro-projeto.component.html',
   styleUrls: ['./cadastro-projeto.component.css'],
-  providers: [ClienteServiceService, CadastrarProjetoService]
+  providers: [ClienteServiceService, CadastrarProjetoService, AlertService]
 })
 export class CadastroProjetoComponent implements OnInit {
 
@@ -17,7 +18,8 @@ export class CadastroProjetoComponent implements OnInit {
 
   constructor(
     private _clienteService: ClienteServiceService,
-    private _projetoService: CadastrarProjetoService
+    private _projetoService: CadastrarProjetoService,
+    private _alert: AlertService
   ) { }
 
   ngOnInit() {
@@ -34,8 +36,13 @@ export class CadastroProjetoComponent implements OnInit {
 
   salvarProjeto() {
     this._projetoService.salvarProjeto(this.projeto).subscribe(
-      resp => { console.log(resp) },
-      err => { }
+      resp => {
+        this._alert.sucess('Sucesso', 'Projeto salvo com sucesso')
+        this.projeto = new Projeto();
+      },
+      err => {
+        this._alert.erro('Erro', 'Erro ao salvar o projeto, verifique sua conexão com a internet')
+      }
     );
   }
 
