@@ -1,3 +1,4 @@
+import { LocalStorageService } from './../../../shared/local-storage.service';
 import { Cliente } from './../../../entidades/cliente';
 import { Projeto } from './../../../entidades/projeto';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
@@ -11,7 +12,7 @@ import { MapperService } from '../../../shared/mapper.service';
   selector: 'app-nova-tarefa',
   templateUrl: './nova-tarefa.component.html',
   styleUrls: ['./nova-tarefa.component.css'],
-  providers: [ControleTempoService, CadastrarProjetoService]
+  providers: [ControleTempoService, CadastrarProjetoService, LocalStorageService]
 })
 
 export class NovaTarefaComponent implements OnInit {
@@ -21,14 +22,18 @@ export class NovaTarefaComponent implements OnInit {
   @Input() clientes: Array<Cliente>;
   @Output() removerTarefa = new EventEmitter<Tarefa>();
   projetos: Array<Projeto> = new Array();
+  cliente: Cliente;
 
   constructor(
     private _controleTempoService: ControleTempoService,
     private _projetoService: CadastrarProjetoService,
-    private mapper: MapperService
+    private mapper: MapperService,
+    private localStorageService: LocalStorageService
   ) { }
 
   ngOnInit(): void {
+    this.cliente = this.clientes[0];
+    this.tarefa.usuario = this.localStorageService.getUser();
   }
 
   marcarTempo() {
@@ -58,8 +63,6 @@ export class NovaTarefaComponent implements OnInit {
   }
 
   buscarProjetos(id) {
-
-    this.insereCliente(id)
     this.buscarProjetoPorIdCliente(id);
   }
 
@@ -77,11 +80,16 @@ export class NovaTarefaComponent implements OnInit {
       )
   }
 
+  inserePojeto(idProjeto) {
+    this.tarefa.projeto = this.projetos.filter(projeto => projeto.id === parseInt(idProjeto))[0];
+  }
+
   private insereCliente(idCliente) {
-    this.tarefa.cliente = this.clientes.filter(cliente => cliente.id === idCliente)[0];
+    this.cliente = this.clientes.filter(cliente => cliente.id === idCliente)[0];
   }
 
   private salvarTarefa() {
+    debugger
     this._controleTempoService.salvarTarefa(this.tarefa).subscribe(
       resp => { alert('salvo') },
       err => { alert('erro') }

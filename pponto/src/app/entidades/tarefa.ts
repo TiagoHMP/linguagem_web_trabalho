@@ -1,15 +1,15 @@
-import { Cliente } from "./cliente";
+import { Usuario } from './usuario';
 import { Projeto } from "./projeto";
 
 export class Tarefa {
-    cliente: Cliente;
+    usuario: Usuario;
     projeto: Projeto;
     horaInicio: string;
     horaFim: string;
     data: Date;
 
     constructor() {
-        this.cliente = new Cliente();
+        this.usuario = new Usuario();
         this.projeto = new Projeto();
         this.horaFim = '0';
         this.horaInicio = '0';

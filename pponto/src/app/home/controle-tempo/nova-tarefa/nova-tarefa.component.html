@@ -1,10 +1,10 @@
 <div class="row col-md-12 conteudo-nova-tarefa card">
-  <select name="" [ngModel]="tarefa.cliente" (ngModelChange)="buscarProjetos($event)" class="form-control col-md-3">
+  <select name="" [ngModel]="cliente" (ngModelChange)="buscarProjetos($event)" class="form-control col-md-3">
     <option [value]="cliente.id" *ngFor="let cliente of clientes"> {{cliente.apelido}} </option>
   </select>
 
-  <select name="projetos" [(ngModel)]="tarefa.projeto" class="form-control col-md-3">
-    <option [value]="projeto" *ngFor="let projeto of projetos"> {{projeto.nome}} </option>
+  <select name="projetos" [ngModel]="projeto" (ngModelChange)="inserePojeto($event)" class="form-control col-md-3">
+    <option [value]="projeto.id" *ngFor="let projeto of projetos"> {{projeto.nome}} </option>
   </select>
 
   <div class="iten form-control col-md-3">
