@@ -11,6 +11,7 @@ import { CadastroProjetoComponent } from './cadastro-projeto/cadastro-projeto.co
 import { ListaClienteComponent } from './cadastro-projeto/lista-cliente/lista-cliente.component';
 
 import { LocalStorageService } from '../shared/local-storage.service';
+import { ItemRelatorioComponent } from './relatorio/item-relatorio/item-relatorio.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LocalStorageService } from '../shared/local-storage.service';
     ControleTempoComponent,
     NovaTarefaComponent,
     CadastroProjetoComponent,
-    ListaClienteComponent
+    ListaClienteComponent,
+    ItemRelatorioComponent
   ],
   imports: [
     FormsModule,

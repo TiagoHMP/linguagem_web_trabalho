@@ -1,0 +1,15 @@
+label{
+    margin-bottom: 0;
+    text-align: center;    
+}
+
+.item-projeto{
+    margin-top: 5px; 
+    padding: 5px;   
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

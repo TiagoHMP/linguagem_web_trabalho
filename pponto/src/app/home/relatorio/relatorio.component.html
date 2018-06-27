@@ -1,7 +1,26 @@
-<div class="btn btn-success col-md-12" (click)="relatorioHorasFuncionario()">
-  <label for="">Horas trabalhadas do Funcionário</label>
-</div>
+<div class="row col-md-12">
+  <div class="col-md-12">
+    <legend>Relatorio</legend>
+    <form action="">
+      <div class="form-group row">
+        <div class="col-md-4 row">
+          <label for="" class="col-md-3">Data inicio</label>
+          <input type="date" class=" col-md-8 form-control">
+        </div>
 
-<div class="btn btn-success col-md-12" (click)="relatorioHorasEquipe()">
-  <label for="">Horas trabalhadas pela equipe</label>
+        <div class="col-md-4 row">
+          <label for="" class="col-md-3">Data Final</label>
+          <input type="date" class="col-md-8 form-control">
+        </div>
+
+        <div class="col-md-4 row">
+          <input type="submit" class="btn btn-success col-md-5" value="Gerar">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-12">
+    <app-item-relatorio></app-item-relatorio>
+  </div>
+
 </div>
