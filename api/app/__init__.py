@@ -19,6 +19,7 @@ from app.infraestrutura.mapping.clienteMap import cliente
 from app.infraestrutura.mapping.tarefaMap import tarefa
 from app.infraestrutura.mapping.projetoMap import projetoMap as projeto
 from app.infraestrutura.mapping.sessaoUser import SessaoUser
+from app.infraestrutura.mapping.usuarioProjetoMap import UsuarioProjetoMap as UsuarioProjeto
 
 try:
     Usuario.create_table()
@@ -26,6 +27,7 @@ try:
     tarefa.create_table()
     projeto.create_table()
     SessaoUser.create_table()
+    UsuarioProjeto.create_table()
 except peewee.OperationalError:
     print('tabelas ja existe')
 
