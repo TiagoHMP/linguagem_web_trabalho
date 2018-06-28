@@ -19,7 +19,7 @@ from app.infraestrutura.mapping.clienteMap import cliente
 from app.infraestrutura.mapping.tarefaMap import tarefa
 from app.infraestrutura.mapping.projetoMap import projetoMap as projeto
 from app.infraestrutura.mapping.sessaoUser import SessaoUser
-from app.infraestrutura.mapping.usuarioProjetoMap import UsuarioProjetoMap as UsuarioProjeto
+from app.infraestrutura.mapping.usuarioProjetoMap import usuarioProjetoMap as UsuarioProjeto
 
 try:
     Usuario.create_table()

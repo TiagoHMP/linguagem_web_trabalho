@@ -35,6 +35,19 @@ class UsuarioRepositorio:
 
 
     @staticmethod
+    def buscarUsuarioPorNome(nome):
+        users = Usuario.select().where(Usuario.login.contains(nome))
+        users = list(users)
+        retorno = []
+        for user in users:
+            if user.login.upper() != 'ADMIN':
+                retorno.append(user.getValues())
+
+        return retorno
+
+
+
+    @staticmethod
     def cadastrar_usuario(user):
         newUser = UsuarioRepositorio.buscar_usuario(user)
         encodeSenha = encryptService.encrypt(user['senha'])

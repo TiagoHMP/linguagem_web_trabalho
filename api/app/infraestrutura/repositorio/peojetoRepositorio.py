@@ -29,11 +29,7 @@ class projetoRepositorio():
             )
             newProjeto.save()
 
-        return projeto;    
-
-
-
-
+        return projeto
 
 
 
