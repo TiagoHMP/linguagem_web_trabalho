@@ -13,6 +13,7 @@ import { homeComponent } from './home/home.component';
 import { AuthGuardService } from './guards/auth-guard.service';
 import { LoginService } from './login/login.service';
 import { SessaoGuard } from './guards/sessao.guard';
+import { AlertService } from './shared/alert.service';
 
 
 
@@ -35,7 +36,8 @@ import { SessaoGuard } from './guards/sessao.guard';
   providers: [
     AuthGuardService,
     LoginService,
-    SessaoGuard
+    SessaoGuard,
+    AlertService
   ],
   bootstrap: [AppComponent]
 })

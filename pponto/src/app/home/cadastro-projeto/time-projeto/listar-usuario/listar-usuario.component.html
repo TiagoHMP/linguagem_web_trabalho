@@ -1,0 +1,21 @@
+<table class="table" [hidden]="usuarios.length < 1">
+  <thead class="thead-light">
+    <tr>
+      <th scope="">Nome</th>
+      <th scope="">Matricula</th>
+      <th scope=""></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{usuario.login}}</td>
+      <td>{{usuario.matricula}}</td>
+      <td>
+        <div class="botoes">
+          <input type="button" class="btn btn-success" (click)="adicionarCoordenador(usuario)" value="Cordenador">
+          <input type="button" class="btn btn-info" (click)="adicionarUsuario(usuario)" value="Encaregado">
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

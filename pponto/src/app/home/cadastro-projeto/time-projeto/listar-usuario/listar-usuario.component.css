@@ -1,0 +1,10 @@
+table{
+    margin-top: 10px;
+    text-align: center;
+}
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0    
+}

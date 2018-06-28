@@ -1,0 +1,44 @@
+<div class="card">
+  <legend>Equipe</legend>
+  <table class="table" [hidden]="false">
+
+    <thead class="thead-light">
+      <tr>
+        <th scope="">Coordenadores</th>
+        <th scope=""></th>
+        <th scope=""></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coordenador of projeto.coordenadores">
+        <td>{{coordenador.login}}</td>
+        <td>{{coordenador.matricula}}</td>
+        <td>
+          <div class="botoes">
+            <input type="button" class="btn btn-danger" value="Remover">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+
+    <thead class="thead-light">
+      <tr>
+        <th scope="">Usuarios</th>
+        <th scope=""></th>
+        <th scope=""></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of projeto.usuarios">
+        <td>{{usuario.login}}</td>
+        <td>{{usuario.matricula}}</td>
+        <td>
+          <div class="botoes">
+            <input type="button" class="btn btn-danger" value="Remover">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

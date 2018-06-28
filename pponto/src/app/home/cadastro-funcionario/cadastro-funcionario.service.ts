@@ -17,5 +17,10 @@ export class CadastroFuncionarioService {
     return this.http.post(this.url + '/novo', usuario);
   }
 
+  buscarFuncionario(nome: string) {
+    return this.http.get(`${this.url}/?nome=${nome}`)
+      .map(resp => resp.json());
+  }
+
 
 }

@@ -5,6 +5,7 @@ import { Sessao } from '../entidades/sessao';
 import { LocalStorageService } from '../shared/local-storage.service';
 import { LoginService } from '../login/login.service';
 import { Usuario } from '../entidades/usuario';
+import { AlertService } from '../shared/alert.service';
 
 @Injectable()
 export class SessaoGuard implements CanActivate {
@@ -14,7 +15,8 @@ export class SessaoGuard implements CanActivate {
   constructor(
     private localStorageService: LocalStorageService,
     private loginService: LoginService,
-    private route: Router
+    private route: Router,
+    private notificarionService: AlertService
   ) { }
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
@@ -31,7 +33,7 @@ export class SessaoGuard implements CanActivate {
             resolve(resp);
           },
           err => {
-            console.log('erro');
+            this.notificarionService.erro('Erro', 'Verifique a conexão com a internet');
           })
     })
     // return false;

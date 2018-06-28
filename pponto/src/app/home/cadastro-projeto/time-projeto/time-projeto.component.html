@@ -1,0 +1,9 @@
+<div class="col-md-12">
+  <label for=""> Buscar Usuario </label>
+  <div class="row noMargin">
+    <input type="text" [(ngModel)]="nome" class="col-md-9 form-control">
+    <input type="button" class="col-md-3 btn btn-outline-success" (click)="buscarUsuario(nome)" value="Buscar">
+  </div>
+  <app-listar-usuario [usuarios]="usuariosEncontrados" [projeto]="projeto"></app-listar-usuario>
+  <app-listar-time [projeto]="projeto"></app-listar-time>
+</div>
