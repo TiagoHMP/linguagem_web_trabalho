@@ -4,9 +4,9 @@ from app.infraestrutura.mapping.usuarioMap import Usuario as usuarioMap
 import peewee
 
 class usuarioProjetoMap(peewee.Model):
-    id = peewee.IntegerField(unique=True, primary_key=True)
     usuario = peewee.ForeignKeyField(usuarioMap)
     projeto = peewee.ForeignKeyField(projetoMap)
+    funcao = peewee.TextField()
 
 
     class Meta:

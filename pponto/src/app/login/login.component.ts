@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
     this._loginService.verificarLogin(this.usuario)
       .subscribe(
         resp => {
-          console.log(resp);
           this._localStorageService.setUser(resp.data.usuario);
           this._localStorageService.setToken(resp.data.token);
           this._loginService.setUserAutenticado();

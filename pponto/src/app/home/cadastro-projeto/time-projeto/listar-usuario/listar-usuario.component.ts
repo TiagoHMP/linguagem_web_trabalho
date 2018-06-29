@@ -22,8 +22,12 @@ export class ListarUsuarioComponent implements OnInit {
     if (contemUsuario) {
       this.projeto.usuarios = this.removeItem(usuario, this.projeto.usuarios);
     }
-    this.projeto.coordenadores.push(usuario);
-    console.log(this.projeto);
+
+    let contemCoordenador = this.verificaSeContemUsuario(usuario, this.projeto.coordenadores);
+    if (!contemCoordenador) {
+      this.projeto.coordenadores.push(usuario);
+    }
+
   }
 
   adicionarUsuario(usuario) {
@@ -31,17 +35,10 @@ export class ListarUsuarioComponent implements OnInit {
     if (contemCoordenador) {
       this.projeto.coordenadores = this.removeItem(usuario, this.projeto.coordenadores);
     }
-    this.projeto.usuarios.push(usuario);
-    console.log(this.projeto);
-  }
 
-  remover(usuario) {
-    let isUsuario = this.verificaSeContemUsuario(usuario, this.projeto.usuarios);
-    let isCordenador = this.verificaSeContemUsuario(usuario, this.projeto.coordenadores);
-    if (isUsuario) {
-      this.removeItem(usuario, this.projeto.usuarios);
-    } else if (isCordenador) {
-      this.removeItem(usuario, this.projeto.coordenadores);
+    let contemUsuario = this.verificaSeContemUsuario(usuario, this.projeto.usuarios);
+    if (!contemUsuario) {
+      this.projeto.usuarios.push(usuario);
     }
 
   }

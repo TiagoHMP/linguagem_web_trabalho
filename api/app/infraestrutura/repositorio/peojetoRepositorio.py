@@ -3,6 +3,7 @@ from app.infraestrutura.mapping.clienteMap import cliente as clienteMap
 from app.infraestrutura.mapping.usuarioMap import Usuario as usuarioMap
 from app.infraestrutura.mapping.usuarioProjetoMap import usuarioProjetoMap
 from app.dominio.entidade.projeto import projeto as ProjetoEntity
+from app import db
 
 class projetoRepositorio():
 
@@ -13,6 +14,7 @@ class projetoRepositorio():
     def saveProject(projeto):
         newCliente = clienteMap.get(clienteMap.id == projeto['cliente']['id'])
         usuarios = projeto['usuarios']
+        coordenadores = projeto['coordenadores']
 
         newProject = projetoMap(
             cliente=newCliente,
@@ -21,19 +23,33 @@ class projetoRepositorio():
         )
         newProject.save()
 
+        projectId = projetoMap.select().order_by(projetoMap.id.desc()).get()
         for usuario in usuarios:
             newUsuario = usuarioMap.get(usuarioMap.id == usuario['id'])
-            newProjeto = usuarioProjetoMap(
+            savedProject = projetoMap.get(projetoMap.id == projectId)
+            newUsuarioProjeto = usuarioProjetoMap(
                 usuario=newUsuario,
-                projeto=newProjeto
+                projeto=savedProject,
+                funcao='U'
             )
-            newProjeto.save()
+            newUsuarioProjeto.save()
+
+        for usuario in coordenadores:
+            newUsuario = usuarioMap.get(usuarioMap.id == usuario['id'])
+            savedProject = projetoMap.get(projetoMap.id == projectId)
+            newUsuarioProjeto = usuarioProjetoMap(
+                usuario=newUsuario,
+                projeto=savedProject,
+                funcao='C'
+            )
+            newUsuarioProjeto.save()
 
         return projeto
 
 
 
     @staticmethod
+    @db.atomic()
     def getProjetoPorIdCliente(idCliente):
         id = int(idCliente)
         projetos = list(projetoMap.select().where(projetoMap.cliente == id))

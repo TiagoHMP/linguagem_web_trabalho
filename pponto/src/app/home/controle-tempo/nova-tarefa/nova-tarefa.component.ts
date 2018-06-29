@@ -75,7 +75,7 @@ export class NovaTarefaComponent implements OnInit {
         });
       },
         err => {
-          console.log('erro');
+
         }
       )
   }

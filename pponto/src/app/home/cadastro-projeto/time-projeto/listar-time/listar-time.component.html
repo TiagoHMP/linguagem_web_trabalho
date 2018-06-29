@@ -15,7 +15,8 @@
         <td>{{coordenador.matricula}}</td>
         <td>
           <div class="botoes">
-            <input type="button" class="btn btn-danger" value="Remover">
+            <input type="button" class="btn btn-danger" (click)="removerCoordenador(coordenador)" value="Remover">
+            <input type="button" class="btn btn-info" (click)="virarUsuario(coordenador)" value="Usuario">
           </div>
         </td>
       </tr>
@@ -34,7 +35,8 @@
         <td>{{usuario.matricula}}</td>
         <td>
           <div class="botoes">
-            <input type="button" class="btn btn-danger" value="Remover">
+            <input type="button" class="btn btn-danger" (click)="removerUsuario(usuario)" value="Remover">
+            <input type="button" class="btn btn-success" (click)="virarCoordenador(usuario)" value="Coordenador">
           </div>
         </td>
       </tr>

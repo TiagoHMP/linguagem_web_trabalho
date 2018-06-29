@@ -5,3 +5,13 @@ table{
 .card{
     margin-top: 10px;
 }
+
+.botoes{
+    display: flex;    
+    align-content: center;
+    padding: 0    
+}
+
+.btn{
+    margin-left: 15px;
+}
