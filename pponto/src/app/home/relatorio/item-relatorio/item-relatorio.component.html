@@ -10,26 +10,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>Mark</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>Mark</td>
-        <td>Mark</td>
+      <tr *ngFor="let tarefa of tarefas">
+        <td>{{tarefa.usuario.login}}</td>
+        <td>{{tarefa.projeto.cliente.nome}}</td>
+        <td>{{tarefa.projeto.nome}}</td>
+        <td>{{tarefa.data}}</td>
+        <td>{{tarefa.tempoTrabalhado}}</td>
       </tr>
     </tbody>
   </table>

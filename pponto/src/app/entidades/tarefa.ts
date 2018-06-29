@@ -7,12 +7,14 @@ export class Tarefa {
     horaInicio: string;
     horaFim: string;
     data: Date;
+    tempoTrabalhado: string;
 
-    constructor() {
-        this.usuario = new Usuario();
-        this.projeto = new Projeto();
-        this.horaFim = '0';
-        this.horaInicio = '0';
-        this.data = null;
+    constructor(usuario?: Usuario, projeto?: Projeto, horaFim?: string, horaInicio?: string, data?: Date, tempoTrabalhado?: string) {
+        this.usuario = usuario || new Usuario();
+        this.projeto = projeto || new Projeto();
+        this.horaFim = horaFim || '0';
+        this.horaInicio = horaInicio || '0';
+        this.data = data || null;
+        this.tempoTrabalhado = tempoTrabalhado || '';
     }
 }

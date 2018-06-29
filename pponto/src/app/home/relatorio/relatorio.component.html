@@ -1,26 +1,26 @@
 <div class="row col-md-12">
-  <div class="col-md-12">
+  <form class="col-md-12">
     <legend>Relatorio</legend>
     <form action="">
       <div class="form-group row">
         <div class="col-md-4 row">
           <label for="" class="col-md-3">Data inicio</label>
-          <input type="date" class=" col-md-8 form-control">
+          <input type="date" name="DataInicio" [(ngModel)]="dataInicio" class=" col-md-8 form-control">
         </div>
 
         <div class="col-md-4 row">
           <label for="" class="col-md-3">Data Final</label>
-          <input type="date" class="col-md-8 form-control">
+          <input type="date" name="DataFim" [(ngModel)]="dataFim" class="col-md-8 form-control">
         </div>
 
         <div class="col-md-4 row">
-          <input type="submit" class="btn btn-success col-md-5" value="Gerar">
+          <input type="submit" class="btn btn-success col-md-5" (click)="buscarTarefas()" value="Gerar">
         </div>
       </div>
     </form>
-  </div>
+  </form>
   <div class="col-md-12">
-    <app-item-relatorio></app-item-relatorio>
+    <app-item-relatorio [tarefas]="tarefas"></app-item-relatorio>
   </div>
 
 </div>

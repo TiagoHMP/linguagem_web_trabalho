@@ -15,4 +15,9 @@ export class ControleTempoService {
   salvarTarefa(tarefa: Tarefa) {
     return this.http.post(`${this.url}/nova`, tarefa);
   }
+
+  buscarTarefaPorData(data) {
+    return this.http.post(`${this.url}/buscar`, data)
+      .map(resp => resp.json());
+  }
 }

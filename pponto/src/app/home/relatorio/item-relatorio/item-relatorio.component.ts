@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Tarefa } from '../../../entidades/tarefa';
 
 @Component({
   selector: 'app-item-relatorio',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemRelatorioComponent implements OnInit {
 
+  @Input() tarefas: Array<Tarefa> = new Array<Tarefa>();
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }
